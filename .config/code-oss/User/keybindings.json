@@ -15,13 +15,6 @@
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
-  // default (adds it for some reason) -->
-  {
-    "key": "ctrl+shift+[Equal]",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
-  },
-
   {
     "key": "ctrl+h",
     "command": "workbench.action.focusPreviousGroup",
@@ -53,13 +46,18 @@
     "command": "workbench.action.terminal.new"
   },
   {
-    "key": "ctrl+shift+alt+[Semicolon]",
-    "command": "workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
+    "key": "ctrl+alt+[Semicolon]",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+shift+c",
     "command": "-workbench.action.terminal.openNativeConsole",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+[Quote]",
+    "command": "workbench.action.terminal.openNativeConsole"
   }
 ]
+

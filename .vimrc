@@ -41,7 +41,6 @@ Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
-
 colorscheme nord
 
 if executable('rg')
@@ -72,23 +71,3 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 
 nnoremap <silent> <Leader>gd :YmcCompleter GoTo<CR>
-nnoremap <silent> <Leader>gf :YmcCompleter FixIt<CR>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

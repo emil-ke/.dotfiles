@@ -1,6 +1,6 @@
 [user]
-	name = Emil Bertlin
-	email = 777blurry@gmail.com
+    name = Emil Bertlin
+    email = emilbertlin@outlook.com
 	username = emilbertlin
 [core]
 	editor = code
@@ -67,3 +67,5 @@
 	required = true
 [init]
 	defaultBranch = main
+[credential]
+	helper = store --file ~/.my-credentials

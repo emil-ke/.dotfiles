@@ -5,7 +5,7 @@
 scan_timeout = 10
 
 [character]
-error_symbol = "[✖](bold red) "
+error_symbol = "[✗](bold red) "
 
 [cmd_duration]
 min_time = 20_000  # Show command duration over 10,000 milliseconds (=10 sec)
@@ -64,6 +64,9 @@ style = "bold green"
 [rust]
 format = "[$symbol$version]($style) "
 style = "bold green"
+
+[nodejs]
+format = "via [🤖 $version](bold green) "
 
 [time]
 time_format = "%T"
