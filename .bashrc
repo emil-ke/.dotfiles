@@ -39,10 +39,10 @@ colors() {
 
 # PATH
 
-export GOROOT=/usr/lib/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH="$HOME/bin:$PATH"
+# export GOROOT=/usr/lib/go
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# export PATH="$HOME/bin:$PATH"
 
 # Change the window title of X terminals
 case ${TERM} in
@@ -150,3 +150,6 @@ ex ()
 # ~/.bashrc, starship init
 
 eval "$(starship init bash)"
+. "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

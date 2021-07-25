@@ -49,4 +49,3 @@ alias ll='ls -ali'
 
 # starship init
 eval "$(starship init zsh)"
-
