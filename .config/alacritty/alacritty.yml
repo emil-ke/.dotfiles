@@ -45,8 +45,8 @@ colors:
      green:   '#A3BE8C'
      yellow:  '#EBCB8B'
      blue:    '#81A1C1'
-     magenta: '#B48EAD'
      cyan:    '#88C0D0'
+     magenta: '#B48EAD'
      white:   '#E5E9F0'
 
    # Bright colors
@@ -65,16 +65,16 @@ font:
   # The normal (roman) font face to use.
   normal:
     family: FiraCode Nerd Font
-    style: Light
+    style: Regular
 
   Bold:
     family: FiraCode Nerd Font
     style: Bold
 
   italic:
-    family: FiraCode Nerd Font
-    style: Italic
-
+   family: FiraCode Nerd Font
+   style: Italic
+ 
   # Point size of the font
   size: 11.0
 
