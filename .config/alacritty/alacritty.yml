@@ -1,106 +1,65 @@
-
 env:
   TERM: xterm-256color
-
-
-
 window:
-
-  # Adds this many blank pixels of padding around the window
-  # Units are physical pixels; this is not DPI aware.
-  # (change requires restart)
   padding:
     x: 16
     y: 8
-
-  # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
-
-  # Window decorations
-  # Setting this to false will result in window without borders and title bar.
+  dynamic_padding: false
   decorations: None
-
 draw_bold_text_with_bright_colors: true
-
 scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
   history: 5000
-
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
   multiplier: 3
-
-# Colors (Nord)
 colors:
-   # Default colors
-   primary:
-     background: '#2E3440'
-     foreground: '#D8DEE9'
-
-   # Normal colors
-   normal:
-     black:   '#3B4252'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     cyan:    '#88C0D0'
-     magenta: '#B48EAD'
-     white:   '#E5E9F0'
-
-   # Bright colors
-   bright:
-     black:   '#4C566A'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#8FBCBB'
-     white:   '#ECEFF4'
-
-# Font configuration (changes require restart)
+  primary:
+    background: "#000000"
+    foreground: "#ffffff"
+  cursor:
+    text: "#F81CE5"
+    cursor: "#ffffff"
+  normal:
+    black: "#000000"
+    red: "#fe0100"
+    green: "#33ff00"
+    yellow: "#feff00"
+    blue: "#0066ff"
+    magenta: "#cc00ff"
+    cyan: "#00ffff"
+    white: "#d0d0d0"
+  bright:
+    black: "#808080"
+    red: "#fe0100"
+    green: "#33ff00"
+    yellow: "#feff00"
+    blue: "#0066ff"
+    magenta: "#cc00ff"
+    cyan: "#00ffff"
+    white: "#FFFFFF"
 font:
-  # The normal (roman) font face to use.
   normal:
     family: FiraCode Nerd Font
     style: Regular
-
   Bold:
     family: FiraCode Nerd Font
     style: Bold
-
   italic:
-   family: FiraCode Nerd Font
-   style: Italic
- 
-  # Point size of the font
-  size: 11.0
-
+    family: FiraCode Nerd Font
+    style: Italic
+  size: 11
+  offset:
+    x: 0
+    y: 1
 bell:
   animation: EaseOutExpo
   duration: 0
-
-background_opacity: 0.94
-
-
-# Values for `action`:
-# - Paste
-# - PasteSelection
-# - Copy (TODO)
+background_opacity: 1
 mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
-
+  - mouse: Middle
+    action: PasteSelection
 cursor:
-  # Cursor style
-  #
-  # Values for 'style':
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
   style: Block
   unfocused_hollow: true
-
 shell:
   program: /usr/bin/fish
+m: /usr/bin/fish
+gram: /usr/bin/fish

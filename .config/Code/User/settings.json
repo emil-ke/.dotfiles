@@ -28,8 +28,11 @@
     },
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.colorTheme": "Nord",
     "workbench.colorCustomizations": {
+      "[Hyper Term Black]": {
+        "editor.foreground": "#fff",
+        "terminal.foreground": "#fff"
+      },
       "statusBar.background": "#5e81ac",
       "statusBar.noFolderBackground": "#bf616a",
       "tab.activeBorderTop": "#d08770",
@@ -39,13 +42,15 @@
       "tab.activeModifiedBorder": "#bf616a"
     },
     "editor.tokenColorCustomizations": {
-      "functions": "#b96faa",
-      "numbers": "#ebcb8b",
-      "variables": "#8fbcbb",
-      "keywords": "#df6a76",
-      "types": "#d08870"
+      "[Nord]": {
+        "functions": "#b96faa",
+        "numbers": "#ebcb8b",
+        "variables": "#8fbcbb",
+        "keywords": "#df6a76",
+        "types": "#d08870"
+      },
     },
-  
+    
     "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
@@ -66,12 +71,13 @@
     "terminal.external.linuxExec": "kitty",
     "terminal.integrated.env.linux": {
       "VSCODE_INTEGRATED_TERMINAL": "true"
-    },
+    }, 
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "terminal.integrated.tabs.enabled": true,
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "none",
     "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Hyper Term Black",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.editorAssociations": {
       "*.ipynb": "jupyter-notebook"
