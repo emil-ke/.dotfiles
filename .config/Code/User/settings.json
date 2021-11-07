@@ -33,8 +33,6 @@
         "editor.foreground": "#fff",
         "terminal.foreground": "#fff"
       },
-      "statusBar.background": "#5e81ac",
-      "statusBar.noFolderBackground": "#bf616a",
       "tab.activeBorderTop": "#d08770",
       "tab.activeBackground": "#434c5e",
       "tab.activeForeground": "#fff",
@@ -67,13 +65,13 @@
     "css.validate": true,
     "explorer.sortOrder": "type",
     "editor.suggestSelection": "first",
-  
+    "editor.cursorBlinking": "solid",  
     "terminal.external.linuxExec": "kitty",
     "terminal.integrated.env.linux": {
       "VSCODE_INTEGRATED_TERMINAL": "true"
     }, 
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "terminal.integrated.tabs.enabled": true,
     "workbench.startupEditor": "none",
     "explorer.confirmDelete": false,
