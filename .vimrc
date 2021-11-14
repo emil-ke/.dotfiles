@@ -41,7 +41,7 @@ Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
-colorscheme nord
+colorscheme nord 
 
 if executable('rg')
     let g:rg_derive_root='true'

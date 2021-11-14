@@ -45,6 +45,8 @@ alias grep='grep --color=auto'
 alias gs='git status'
 alias gc='git clone'
 alias files='nautilus'
+alias python='python3.10'
+alias nlc='nvidia-settings --load-config-only'
 
 
 starship init fish | source

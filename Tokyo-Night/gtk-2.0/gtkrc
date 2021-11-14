@@ -1,0 +1,31 @@
+# Text/base colors
+gtk-color-scheme = "text_color:#ccd4de\nbase_color:#97aac2"
+# Foreground/background colors
+gtk-color-scheme = "fg_color:#a9b1d6\nbg_color:#1a1b26"
+# Selection colors
+gtk-color-scheme = "selected_fg_color:#9aa5ce\nselected_bg_color:#565f89"
+# Tooltip colors
+gtk-color-scheme = "tooltip_fg_color:#e6f2f2\ntooltip_bg_color:#414868"
+# Window colors
+gtk-color-scheme = "wm_color:#1a1b26\nunfocused_wm_color:#1a1b26"
+# Panel colors
+gtk-color-scheme = "panel_bg_color:#414868\npanel_fg_color:#ccd4de"
+# Dark Theme - Text/base colors
+gtk-color-scheme = "dark_text_color:#ccd4de\ndark_base_color:#414868"
+# Dark Theme - Foreground/background colors
+gtk-color-scheme = "dark_fg_color:#d8dee9\ndark_bg_color:#1a1b26"
+gtk-color-scheme = "sidebar_bg:#414868"
+gtk-color-scheme = "sidebar_fg:#d8dee9"
+
+gtk-auto-mnemonics = 1
+gtk-primary-button-warps-slider = 1
+
+include "main.rc"
+
+# App stylings
+include "apps/chrome.rc"
+include "apps/gimp.rc"
+include "apps/libreoffice.rc"
+include "apps/terminal.rc"
+include "apps/thunar.rc"
+include "apps/xfce.rc"
