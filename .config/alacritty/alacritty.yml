@@ -10,40 +10,45 @@ draw_bold_text_with_bright_colors: true
 scrolling:
   history: 5000
   multiplier: 3
+
 colors:
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
-  cursor:
-    text: "#F81CE5"
-    cursor: "#ffffff"
+    background: '0x1a1b26'
+    foreground: '0xa9b1d6'
+
+
+    # Normal colors
   normal:
-    black: "#000000"
-    red: "#fe0100"
-    green: "#33ff00"
-    yellow: "#feff00"
-    blue: "#0066ff"
-    magenta: "#cc00ff"
-    cyan: "#00ffff"
-    white: "#d0d0d0"
+    black:   '0x32344a'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xad8ee6'
+    cyan:    '0x449dab'
+    white:   '0xc0caf5'
+
+    # Bright colors
   bright:
-    black: "#808080"
-    red: "#fe0100"
-    green: "#33ff00"
-    yellow: "#feff00"
-    blue: "#0066ff"
-    magenta: "#cc00ff"
-    cyan: "#00ffff"
-    white: "#FFFFFF"
+    black:   '0x444b6a'
+    red:     '0xff7a93'
+    green:   '0xb9f27c'
+    yellow:  '0xff9e64'
+    blue:    '0x7da6ff'
+    magenta: '0xbb9af7'
+    cyan:    '0x0db9d7'
+    white:   '0xebf4ff'
+
+
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: Fira Code  
     style: Regular
   Bold:
-    family: FiraCode Nerd Font
+    family: Fira Code
     style: Bold
   italic:
-    family: FiraCode Nerd Font
+    family: Fira Code 
     style: Italic
   size: 11
   offset:
