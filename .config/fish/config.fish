@@ -1,4 +1,3 @@
-set -x EDITOR "vim"
 set -U fish_greeting
 
 
@@ -8,12 +7,7 @@ set -U fish_greeting
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
-
-# below line needed in order to execute programs
-# set -x GOPATH /user/emil/go
-# set -x PATH $PATH /usr/local/go/bin
-# set PATH /home/emil/.local/bin $PATH
-
+# Go path
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
@@ -27,27 +21,35 @@ set fish_color_param brcyan
 
 
 # navigation
-alias ..='cd ..'
-alias .2='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
+abbr -a .. cd ..
+abbr -a .2 cd ../..
+abbr -a .3 cd ../../..
+abbr -a .4 cd ../../../..
+abbr -a .5 cd ../../../../..
 
 
-# ls / exa alias
-alias ls='exa --color=always --group-directories-first'
-alias ll='exa -ali --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
+# ls / exa 
+abbr -a l ls --group-directories-first -F
+abbr -a ls exa --color=always --group-directories-first -lhF
+abbr -a ll exa -ali --color=always --group-directories-first
+abbr -a lt exa -aT --color=always --group-directories-first
+
+# Git commands
+abbr -a gita git add -A
+abbr -a gits git status
+abbr -a gitc git commit -m 
+abbr -a gitp git push
+abbr -a gitl "git log --oneline -n 10"
 
 
-# Other alias
-alias grep='grep --color=auto'
-alias gs='git status'
-alias gc='git clone'
-alias files='nautilus'
-alias python='python3.10'
-alias nlc='nvidia-settings --load-config-only'
+abbr -a grep grep --color=auto
+abbr -a files nautilus
+abbr -a c clear
+# Make directory and cd into it
+function mkcd
+  mkdir -p $argv; and cd $argv
+end
 
-
+# starship init
 starship init fish | source
 

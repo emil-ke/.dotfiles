@@ -1,13 +1,27 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export --path GOPATH:/home/emil/go
 SETUVAR __fish_initialized:3100
-SETUVAR _fisher_franciscolourenco_2F_done_files:/home/emil/\x2econfig/fish/conf\x2ed/done\x2efish
+SETUVAR _fish_abbr__2E_2E_:cd\x20\x2e\x2e
+SETUVAR _fish_abbr__2E_32_:cd\x20\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr__2E_33_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr__2E_34_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr__2E_35_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_c:clear
+SETUVAR _fish_abbr_files:nautilus
+SETUVAR _fish_abbr_gita:git\x20add\x20\x2dA
+SETUVAR _fish_abbr_gitc:git\x20commit\x20\x2dm
+SETUVAR _fish_abbr_gitl:git\x20log\x20\x2d\x2doneline\x20\x2dn\x2010
+SETUVAR _fish_abbr_gitp:git\x20push
+SETUVAR _fish_abbr_gits:git\x20status
+SETUVAR _fish_abbr_grep:grep\x20\x2d\x2dcolor\x3dauto
+SETUVAR _fish_abbr_l:ls\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2dF
+SETUVAR _fish_abbr_ll:exa\x20\x2dali\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2dlhF
+SETUVAR _fish_abbr_lt:exa\x20\x2daT\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
 SETUVAR _fisher_halostatue_2F_fish_2D_rust_files:/home/emil/\x2econfig/fish/conf\x2ed/halostatue_fish_rust\x2efish
-SETUVAR _fisher_jorgebucaran_2F_fish_2D_bax_files:/home/emil/\x2econfig/fish/functions/replay\x2efish\x1e/home/emil/\x2econfig/fish/completions/replay\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/emil/\x2econfig/fish/functions/fisher\x2efish\x1e/home/emil/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:/home/emil/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e/home/emil/\x2econfig/fish/functions/_nvm_list\x2efish\x1e/home/emil/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e/home/emil/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e/home/emil/\x2econfig/fish/functions/nvm\x2efish\x1e/home/emil/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e/home/emil/\x2econfig/fish/completions/nvm\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ehalostatue/fish\x2drust\x1ejorgebucaran/fish\x2dbax\x1ejorgebucaran/nvm\x2efish\x1efranciscolourenco/done
+SETUVAR _fisher_plugins:halostatue/fish\x2drust\x1ejorgebucaran/nvm\x2efish\x1ejorgebucaran/fisher
 SETUVAR fish_color_autosuggestion:\x2395a4ad
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:brcyan
@@ -20,7 +34,6 @@ SETUVAR fish_color_escape:00a6b2
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
 SETUVAR fish_color_host_remote:yellow
-SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
 SETUVAR fish_color_normal:brcyan
 SETUVAR fish_color_operator:00a6b2
 SETUVAR fish_color_param:brcyan
@@ -35,8 +48,9 @@ SETUVAR fish_greeting:\x1d
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
-SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_paths:/home/emil/\x2elocal/bin\x1e/home/emil/Applications
 SETUVAR nvm_data:/home/emil/\x2elocal/share/nvm
+SETUVAR nvm_default_version:v16\x2e13\x2e0
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist
