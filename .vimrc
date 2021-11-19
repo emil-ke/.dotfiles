@@ -17,6 +17,7 @@ set undofile
 set incsearch
 set wildmenu
 set foldcolumn=1
+set encoding=utf-8
 "Always show current position
 set ruler
 
