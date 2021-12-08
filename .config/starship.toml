@@ -72,7 +72,7 @@ style = "bold green"
 time_format = "%T"
 format = "🕙 $time($style) "
 style = "bright-white"
-disabled = false
+disabled = false 
 
 [username]
 style_user = "bold blue"

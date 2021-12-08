@@ -32,7 +32,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
 Plug 'valloric/youcompleteme'
@@ -44,7 +43,7 @@ Plug 'dag/vim-fish'
 
 call plug#end()
 
-colorscheme nord 
+colorscheme nord
 
 if executable('rg')
     let g:rg_derive_root='true'

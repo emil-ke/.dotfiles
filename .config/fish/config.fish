@@ -1,5 +1,9 @@
 set -U fish_greeting
 
+# pyenv path setup
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
+
 
 ### ADDING TO THE PATH
 # First line removes the path; second line sets it.  Without the first line,
@@ -28,7 +32,7 @@ abbr -a .4 cd ../../../..
 abbr -a .5 cd ../../../../..
 
 
-# ls / exa 
+# ls / exa
 abbr -a l ls --group-directories-first -F
 abbr -a ls exa --color=always --group-directories-first -lhF
 abbr -a ll exa -ali --color=always --group-directories-first
@@ -36,8 +40,10 @@ abbr -a lt exa -aT --color=always --group-directories-first
 
 # Git commands
 abbr -a gita git add -A
+abbr -a gs git status
 abbr -a gits git status
-abbr -a gitc git commit -m 
+abbr -a gc git clone
+abbr -a gitc git commit -m
 abbr -a gitp git push
 abbr -a gitl "git log --oneline -n 10"
 
@@ -45,6 +51,11 @@ abbr -a gitl "git log --oneline -n 10"
 abbr -a grep grep --color=auto
 abbr -a files nautilus
 abbr -a c clear
+abbr -a tmux tmux -2
+abbr -a cat bat
+
+alias vim nvim
+
 # Make directory and cd into it
 function mkcd
   mkdir -p $argv; and cd $argv
@@ -52,4 +63,5 @@ end
 
 # starship init
 starship init fish | source
+
 
