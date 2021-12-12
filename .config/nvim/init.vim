@@ -48,8 +48,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'lukas-reineke/indent-blankline.nvim'
-
 Plug 'jaredgorski/spacecamp'
+Plug 'nanotee/zoxide.vim'
 call plug#end()
 
 let g:tokyonight_style = 'storm'
