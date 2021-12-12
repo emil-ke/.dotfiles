@@ -65,3 +65,19 @@ end
 starship init fish | source
 
 
+
+# Generated for envman. Do not edit.
+test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
+
+# zoxide config
+zoxide init fish | source
+
+set -x _ZO_DATA_DIR '/home/emil/.local/share'
+set -x _ZO_ECHO '1'
+set -x _ZO_EXCLUDE_DIRS ''
+set -x _ZO_FZF_OPTS '-e'
+set -x _ZO_MAXAGE '8000'
+set -x _ZO_RESOLVE_SYMLINKS '1'
+
+abbr cd z
+

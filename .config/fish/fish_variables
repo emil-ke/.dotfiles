@@ -9,6 +9,7 @@ SETUVAR _fish_abbr__2E_34_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr__2E_35_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_cat:bat
+SETUVAR _fish_abbr_cd:z
 SETUVAR _fish_abbr_files:nautilus
 SETUVAR _fish_abbr_gc:git\x20clone
 SETUVAR _fish_abbr_gita:git\x20add\x20\x2dA
