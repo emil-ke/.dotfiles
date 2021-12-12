@@ -164,3 +164,9 @@ eval "$(starship init bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(pyenv init -)"
 alias vim='nvim'
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# zoxide
+eval "$(zoxide init bash)"
