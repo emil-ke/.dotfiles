@@ -18,7 +18,8 @@ schemes:
   tokyo-night: &tokyo-night
     # Default colors
     primary:
-      background: '0x1a1b26'
+      # background: '0x1a1b26'
+      background: '0x0b0d1a'
       foreground: '0xa9b1d6'
 
 
@@ -72,7 +73,31 @@ schemes:
       cyan:    '0x0db9d7'
       white:   '0xacb0d0'
 
-colors: *tokyo-night
+
+  maintheme: &maintheme
+    primary:
+      background: "0x000000"
+      foreground: "0xa9b1d6"
+    normal:
+      black: "0x000000"
+      red: "0xF44708"
+      green: "0x57B262"
+      yellow: "0xfff23b"
+      blue: "0x2b7af0"
+      magenta: "0xe165fc"
+      cyan: "0x8a77ed"
+      white: "0xd5c1d9"
+    bright:
+      black: "0x141414"
+      red: "0xF44708"
+      green: "0x57B262"
+      yellow: "0xfff457"
+      blue: "0x7c6eff"
+      magenta: "0xe778ff"
+      cyan: "0x309fff"
+      white: "0xF1F6F9"
+
+colors: *maintheme
 font:
   normal:
     family: Fira Code
