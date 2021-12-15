@@ -33,28 +33,26 @@ abbr -a .5 cd ../../../../..
 
 
 # ls / exa
-abbr -a l ls --group-directories-first -F
-abbr -a ls exa --color=always --group-directories-first -lhF
-abbr -a ll exa -ali --color=always --group-directories-first
 abbr -a lt exa -aT --color=always --group-directories-first
+
+
 
 # Git commands
 abbr -a gita git add -A
 abbr -a gs git status
 abbr -a gits git status
 abbr -a gc git clone
+abbr -a gco git checkout
 abbr -a gitc git commit -m
 abbr -a gitp git push
 abbr -a gitl "git log --oneline -n 10"
 
-
-abbr -a grep grep --color=auto
 abbr -a files nautilus
 abbr -a c clear
-abbr -a tmux tmux -2
-abbr -a cat bat
 
-alias vim nvim
+abbr -a cat bat
+abbr -a fzfbat "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+
 
 # Make directory and cd into it
 function mkcd
@@ -63,8 +61,6 @@ end
 
 # starship init
 starship init fish | source
-
-
 
 # Generated for envman. Do not edit.
 test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
@@ -79,5 +75,4 @@ set -x _ZO_FZF_OPTS '-e'
 set -x _ZO_MAXAGE '8000'
 set -x _ZO_RESOLVE_SYMLINKS '1'
 
-abbr cd z
 
