@@ -68,12 +68,6 @@ style = "bold green"
 # [nodejs]
 # format = "via [🤖 $version](bold green) "
 
-[time]
-time_format = "%T"
-format = "🕙 $time($style) "
-style = "bright-white"
-disabled = false 
-
 [username]
 style_user = "bold blue"
 show_always = false
