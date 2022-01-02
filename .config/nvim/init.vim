@@ -116,6 +116,9 @@ let g:fzf_colors =
 
 """ Custom Mappings
 
+" fff floatterm
+nmap <c-t> :FloatermNew fff<cr>
+
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
@@ -131,7 +134,7 @@ nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 nmap \\ <leader>q
 nmap <leader>w :TagbarToggle<CR>
 nmap \| <leader>w
-nmap <leader>t :call TrimWhitespace()<CR>
+nmap <leader>t :StripWhitespace<CR>
 nmap <leader>p <Plug>(pydocstring)
 nmap <leader>s :Rg<CR>
 nmap <leader>d :Files<CR>
