@@ -1,13 +1,15 @@
 #!/bin/bash
 
-echo "installing dependencies"
+echo "\n\nInstalling Dependencies\n\n"
 
 # Install dependencies/packages
 sudo pacman -S --needed \
     git \
     base-devel \
+    alacritty \
     stow \
     fzf \
+    code \
     exa \
     zoxide \
     fish \
@@ -43,7 +45,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-echo "stowing packages (stow <package>)"
+printf "\n\nstowing packages (stow <package>)\n\n"
 
 stow alacritty
 stow bash
@@ -62,4 +64,4 @@ stow vim
 nvim --headless +PlugInstall +qall
 vim --headless +PlugInstall +qall
 
-echo "Setup finished"
+echo "\n\nSetup finished"
