@@ -10,4 +10,4 @@ chmod +x ./install_packages.sh ./stow_packages.sh
 nvim --headless +PlugInstall +qall
 vim --headless +PlugInstall +qall
 
-printf "\n\nSetup finished"
+printf "\n\nSetup finished\n"
