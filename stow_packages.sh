@@ -52,4 +52,9 @@ printf "\n\n installing vim/nvim plugins \n\n"
 nvim --headless +PlugInstall +qall
 vim --headless +PlugInstall +qall
 
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
+
+spicetify apply
+
 printf "\n\nSetup finished"
