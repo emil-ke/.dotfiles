@@ -174,7 +174,8 @@ h1 {
 /* Scrollbars */
 .os-scrollbar-handle {
   background: var(--spice-button) !important;
-  border-radius: 4px;
+  width: 8px;
+  border-radius: 2px;
 }
 
 /* Making index column wider so that lighter background that
