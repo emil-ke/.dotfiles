@@ -1,10 +1,10 @@
 #!/bin/bash
 
-chmod +x install_packages.sh stow_packages
+chmod +x ./install_packages.sh ./stow_packages.sh
 
-./install_packages
+./install_packages.sh
 
-./stow_packages
+./stow_packages.sh
 
 # Vim/neovim plugin install with vim-plug
 nvim --headless +PlugInstall +qall
