@@ -2,24 +2,9 @@
 
 printf "\n\nInstalling Dependencies\n\n"
 
-# Install dependencies/packages (you might add --needed flag here but that caused issues for me (all the packages were not installed))
-sudo pacman -S \
-    git \
-    base-devel \
-    alacritty \
-    stow \
-    fzf \
-    code \
-    exa \
-    zoxide \
-    fish \
-    bat \
-    vim \
-    neovim \
-    stow \
-    diff-so-fancy \
-    node \
-    go
+# Install dependencies/packages
+
+sudo pacman -S --needed alacritty stow fzf code exa zoxide fish nodejs bat vim neovim stow diff-so-fancy node go
 
 #install yay
 
