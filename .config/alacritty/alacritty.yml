@@ -53,7 +53,7 @@ schemes:
 
     # Normal colors
     normal:
-      black:   '0x32344a'
+      black:   '0x213154'
       red:     '0xf7768e'
       green:   '0x9ece6a'
       yellow:  '0xe0af68'
@@ -64,7 +64,7 @@ schemes:
 
     # Bright colors
     bright:
-      black:   '0x444b6a'
+      black:   '0x2d4373'
       red:     '0xff7a93'
       green:   '0xb9f27c'
       yellow:  '0xff9e64'
@@ -97,7 +97,7 @@ schemes:
       cyan: "0x309fff"
       white: "0xF1F6F9"
 
-colors: *maintheme
+colors: *tokyo-night-storm
 font:
   normal:
     family: FiraCode Nerd Font
