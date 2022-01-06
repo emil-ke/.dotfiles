@@ -40,12 +40,11 @@ abbr -a lt exa -aT --color=always --group-directories-first
 # Git commands
 abbr -a gita git add -A
 abbr -a gs git status
-abbr -a gits git status
 abbr -a gc git clone
 abbr -a gco git checkout
 abbr -a gitc git commit -m
 abbr -a gitp git push
-abbr -a gitl "git log --oneline -n 10"
+abbr -a gitl "git log --color=always -n 10 --format='%C(cyan)%h %C(blue)%ar%C(auto)%d %C(yellow)%s%+b %C(black)%ae' --reverse"
 
 abbr -a files nautilus
 abbr -a c clear
