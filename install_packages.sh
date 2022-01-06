@@ -4,15 +4,16 @@ printf "\n\nInstalling Dependencies\n\n"
 
 # Install dependencies/packages
 
-sudo pacman -S --needed alacritty stow fzf code exa zoxide fish nodejs bat vim neovim stow diff-so-fancy node go
+sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs bat vim neovim stow diff-so-fancy go
 
 #install yay
 
 cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ~/Downloads; rm -rf yay
 
-yay -S --needed \
+yay -S \
     nerd-fonts-fira-code \
     spotify \
+    ccls-git
 
 
 # nvm install
