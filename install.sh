@@ -24,4 +24,4 @@ zoxide init fish
 nvim --headless +PlugInstall +qall
 vim +PlugInstall +qall
 
-printf "\n\n%40s\n" "${blue}setup finished\n$(normal)"
+printf "\n\n%40s\n" "${blue}setup finished\n ${normal}"

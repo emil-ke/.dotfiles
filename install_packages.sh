@@ -3,7 +3,7 @@
 blue=$(tput setaf 4)
 normal=$(tput sgr0)
 
-printf "\n\n%40s\n" "${blue}Installing Dependencies\n\n${normal}"
+printf "\n\n%40s\n" "${blue}Installing Dependencies \n\n ${normal}"
 
 
 # Install dependencies/packages
