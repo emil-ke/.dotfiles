@@ -17,8 +17,11 @@ fi
 
 ./stow_packages.sh
 
+# zoxide needs to be initialized
+zoxide init fish
+
 # Vim/neovim plugin install with vim-plug
 nvim --headless +PlugInstall +qall
 vim +PlugInstall +qall
 
-printf "\n\n%40s\n" "${blue}setup finished$(normal)\n"
+printf "\n\n%40s\n" "${blue}setup finished\n$(normal)"
