@@ -58,20 +58,20 @@ spicetify backup apply
 
 # VSC (code)
 
-if [ -d $CONF/Code\ -\ OSS/User]; then
+if [ -d "$CONF/Code\ -\ OSS/User"]; then
     rm $CONF/Code\ -\ OSS/User/settings.json
     rm $CONF/Code\ -\ OSS/User/keybindings.json
     ln -s ./Code\ -\ OSS/settings.json $CONF/Code\ -\ OSS/User
     ln -s .Code\ -\ OSS/keybindings.json $CONF/Code\ -\ OSS/User
-elif [ -d $CONF/Code/User]; then
+elif [ -d "$CONF/Code/User"]; then
     rm $CONF/Code/User/setttings.json
     rm $CONF/Code/User/keybindings.json
     ln -s ./Code\ -\ OSS/settings.json $CONF/Code/User
     ln -s ./Code\ -\ OSS/keybindings.json
 else
-    mkdir -p ~/.config/Code\ -\ OSS/User
+    mkdir -pv ~/.config/Code\ -\ OSS/User
     ln -s ./Code\ -\ OSS/settings.json $CONF/Code\ -\ OSS/User
     ln -s ./Code\ -\ OSS/keybindings.json $CONF/Code\ -\ OSS/User
-    echo "created ~/.config/Code\ -\ OSS/User   directory"
 fi
+
 
