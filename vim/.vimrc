@@ -1,5 +1,6 @@
 syntax on
 
+set termguicolors
 set noerrorbells
 set novisualbell
 set tm=500
@@ -31,7 +32,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'jmoggee/mirage.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
 Plug 'valloric/youcompleteme'
@@ -43,7 +44,8 @@ Plug 'dag/vim-fish'
 
 call plug#end()
 
-colorscheme nord
+set background=dark
+colorscheme mirage
 
 if executable('rg')
     let g:rg_derive_root='true'
