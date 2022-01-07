@@ -45,13 +45,16 @@ stow -v --dotfiles tmux
 stow -v --dotfiles vim
 
 # I don't want to stage all the backup files so I didn't use stow for spicetify
-rm -rf $CONF/spicetify/config-xpui.ini
-rm -rf $CONF/spicetify/Themes/Base
+rm $CONF/spicetify/config-xpui.ini
+rm $CONF/spicetify/Themes/Base
 mkdir $CONF/spicetify/Themes/Base
 
 ln -s ./spicetify/.config/spicetify/config-xpui.ini ~/.config/
 ln -s ./spicetify/.config/spicetify/Themes/Base
 
+# spicetify setup
+sudo chmod 777 /usr/share/spotify -R
+spicetify backup apply
 
 # VSC (code)
 
@@ -69,8 +72,6 @@ else
     mkdir -p ~/.config/Code\ -\ OSS/User
     ln -s ./Code\ -\ OSS/settings.json $CONF/Code\ -\ OSS/User
     ln -s ./Code\ -\ OSS/keybindings.json $CONF/Code\ -\ OSS/User
+    echo "created ~/.config/Code\ -\ OSS/User   directory"
 fi
 
-# spicetify setup
-sudo chmod 777 /usr/share/spotify -R
-spicetify backup apply
