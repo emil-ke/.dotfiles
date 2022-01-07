@@ -1,6 +1,9 @@
 #!/bin/bash
 
-printf "\n\nInstalling Dependencies\n\n"
+blue=$(tput setaf 4)
+normal=$(tput sgr0)
+
+printf "\n\n%40s\n" "${blue}Installing Dependencies$(normal)\n\n"
 
 # Install dependencies/packages
 

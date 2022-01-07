@@ -1,6 +1,9 @@
 #!/bin/bash
 
-printf "\n\nstowing packages (stow <package>)\n\n"
+blue=$(tput setaf 4)
+normal=$(tput sgr0)
+
+printf "\n\n$(blue)stowing packages (stow <package>)$(normal)\n\n"
 
 # rm directory/file if it exists (stow won't work properly if there already exists a file)
 ## rm obiously checks if there exists a file/dir to remove so this is fine

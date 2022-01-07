@@ -1,6 +1,7 @@
 #!/bin/bash
 
-chmod +x ./install_packages.sh ./stow_packages.sh
+blue=$(tput setaf 4)
+normal=$(tput sgr0)
 
 ./install_packages.sh
 
@@ -18,6 +19,6 @@ fi
 
 # Vim/neovim plugin install with vim-plug
 nvim --headless +PlugInstall +qall
-vim --headless +PlugInstall +qall
+vim +PlugInstall +qall
 
-printf "\n\nSetup finished\n"
+printf "\n\n%40s\n" "${blue}setup finished$(normal)\n"
