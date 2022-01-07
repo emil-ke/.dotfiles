@@ -17,11 +17,11 @@ set -x PATH $PATH $GOPATH/bin
 
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-set fish_color_normal brcyan
-set fish_color_autosuggestion '#95a4ad'
-set fish_color_command brcyan
-set fish_color_error '#ff6c6b'
-set fish_color_param brcyan
+# set fish_color_normal brcyan
+# set fish_color_autosuggestion '#95a4ad'
+# set fish_color_command brcyan
+# set fish_color_error '#ff6c6b'
+# set fish_color_param brcyan
 
 
 # navigation
@@ -67,11 +67,11 @@ test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.
 # zoxide config
 zoxide init fish | source
 
-set -x _ZO_DATA_DIR '/home/emil/.local/share'
-set -x _ZO_ECHO '1'
-set -x _ZO_EXCLUDE_DIRS ''
-set -x _ZO_FZF_OPTS '-e'
-set -x _ZO_MAXAGE '8000'
-set -x _ZO_RESOLVE_SYMLINKS '1'
+set -x _ZO_DATA_DIR "$HOME/.local/share"
+set -x _ZO_ECHO "1"
+set -x _ZO_EXCLUDE_DIRS ""
+set -x _ZO_FZF_OPTS "-e"
+set -x _ZO_MAXAGE "8000"
+set -x _ZO_RESOLVE_SYMLINKS "1"
 
 
