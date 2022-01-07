@@ -13,65 +13,40 @@ printf "\n\n$(blue)stowing packages (stow <package>)$(normal)\n\n"
 CONF=~/.config
 
 
-rm -rf $CONF/alacritty
+rm -rfv $CONF/alacritty
 
-rm ~/.bashrc
+rm -v ~/.bashrc
 
-# rm -rf $CONF/Code\ -\ OSS
+rm -rf $CONF/Code\ -\ OSS
 
-rm -rf $CONF/fish
+rm -rfv $CONF/fish
 
-rm ~/.gitconfig
+rm -v ~/.gitconfig
 
-rm -rf $CONF/nvim
+rm -rfv $CONF/nvim
 
-rm $CONF/starship.toml
+rm -v $CONF/starship.toml
 
-rm ~/.tmux.conf
+rm -v ~/.tmux.conf
 
-rm ~/.vimrc
+rm -v ~/.vimrc
 
 
 # stow all the dotfiles
 
 stow -v --dotfiles alacritty
 stow -v --dotfiles bash
-# stow -v --dotfiles Code\ -\ OSS
+stow -v --dotfiles Code\ -\ OSS
 stow -v --dotfiles fish
 stow -v --dotfiles git
 stow -v --dotfiles nvim
 stow -v --dotfiles starship
+stow -v --dotfiles starship
 stow -v --dotfiles tmux
 stow -v --dotfiles vim
-
-# I don't want to stage all the backup files so I didn't use stow for spicetify
-rm $CONF/spicetify/config-xpui.ini
-rm $CONF/spicetify/Themes/Base
-mkdir $CONF/spicetify/Themes/Base
-
-ln -s ./spicetify/.config/spicetify/config-xpui.ini ~/.config/
-ln -s ./spicetify/.config/spicetify/Themes/Base
 
 # spicetify setup
 sudo chmod 777 /usr/share/spotify -R
 spicetify backup apply
-
-# VSC (code)
-
-if [ -d "$CONF/Code\ -\ OSS/User"]; then
-    rm $CONF/Code\ -\ OSS/User/settings.json
-    rm $CONF/Code\ -\ OSS/User/keybindings.json
-    ln -s ./Code\ -\ OSS/settings.json $CONF/Code\ -\ OSS/User
-    ln -s .Code\ -\ OSS/keybindings.json $CONF/Code\ -\ OSS/User
-elif [ -d "$CONF/Code/User"]; then
-    rm $CONF/Code/User/setttings.json
-    rm $CONF/Code/User/keybindings.json
-    ln -s ./Code\ -\ OSS/settings.json $CONF/Code/User
-    ln -s ./Code\ -\ OSS/keybindings.json
-else
-    mkdir -pv ~/.config/Code\ -\ OSS/User
-    ln -s ./Code\ -\ OSS/settings.json $CONF/Code\ -\ OSS/User
-    ln -s ./Code\ -\ OSS/keybindings.json $CONF/Code\ -\ OSS/User
-fi
 
 

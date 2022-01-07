@@ -5,9 +5,9 @@ normal=$(tput sgr0)
 
 ./install_packages.sh
 
-# nvm.fish has an error when you have no folder in ~/.local/share/nvm but this seems to fix it.
+# nvm.fish has an error when you have no folder in ~/.local/share/nvm. But this seems to fix it.
 
-if [ -d ~/.local/share/nvm]
+if [ -d "~/.local/share/nvm"]
 
 then
     :
