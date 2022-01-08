@@ -34,9 +34,9 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
-    "blackCauldron7/surround.nvim",
+    'blackCauldron7/surround.nvim',
     config = function()
-      require"surround".setup {mappings_style = "surround"}
+      require'surround'.setup {mappings_style = 'surround'}
     end
   }
 end)
