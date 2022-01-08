@@ -20,8 +20,8 @@ fi
 # zoxide needs to be initialized
 zoxide init fish
 
-# Vim/neovim plugin install with vim-plug
-nvim --headless +PlugInstall +qall
-vim +PlugInstall +qall
+
+# TODO: Automate neovim package install with packer nvim +PackerInstall won't work since you have to comment out
+# the require statements before hand ( in init.lua file )
 
 printf "\n\n%40s\n" "${blue}setup finished\n ${normal}"
