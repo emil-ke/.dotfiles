@@ -96,16 +96,16 @@ schemes:
       cyan: "0x309fff"
       white: "0xF1F6F9"
 
-colors: *tokyo-night-storm
+colors: *tokyo-night
 font:
   normal:
-    family: FiraCode Nerd Font
-    style: Regular
+    family: Hack Nerd Font
+    style: normal
   Bold:
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
     style: Italic
   size: 11
   offset:
