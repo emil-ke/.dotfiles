@@ -18,8 +18,7 @@ schemes:
   tokyo-night: &tokyo-night
     # Default colors
     primary:
-      # background: '0x1a1b26'
-      background: '0x0b0d1a'
+      background: '0x1a1b26'
       foreground: '0xa9b1d6'
 
 
@@ -31,7 +30,7 @@ schemes:
       yellow:  '0xe0af68'
       blue:    '0x7aa2f7'
       magenta: '0xad8ee6'
-      cyan:    '0x449dab'
+      cyan:    '0x40a2e3'
       white:   '0xc0caf5'
 
     # Bright colors
@@ -42,7 +41,7 @@ schemes:
       yellow:  '0xff9e64'
       blue:    '0x7da6ff'
       magenta: '0xbb9af7'
-      cyan:    '0x0db9d7'
+      cyan:    '0x56aed6'
       white:   '0xebf4ff'
 
   tokyo-night-storm: &tokyo-night-storm
