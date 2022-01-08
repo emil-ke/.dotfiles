@@ -25,6 +25,8 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'ThePrimeagen/git-worktree.nvim'
+  use 'Vimjas/vim-python-pep8-indent'
+  use 'ntpeters/vim-better-whitespace'
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
