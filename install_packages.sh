@@ -8,7 +8,7 @@ printf "\n\n%40s\n" "${blue}Installing Dependencies \n\n ${normal}"
 
 # Install dependencies/packages
 
-sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs bat vim python pyenv neovim stow diff-so-fancy go
+sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs npm bat vim python pyenv neovim stow diff-so-fancy go xsel
 
 #install yay
 
@@ -31,8 +31,13 @@ fisher update
 # starship install
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
-# packer install
+# Pip
+pip install pynvim
 
+# Npm install
+sudo npm i -g neovim yarn
+
+# packer install
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 

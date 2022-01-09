@@ -24,4 +24,4 @@ zoxide init fish
 # TODO: Automate neovim package install with packer nvim +PackerInstall won't work since you have to comment out
 # the require statements before hand ( in init.lua file )
 
-printf "\n\n%40s\n" "${blue}setup finished\n ${normal}"
+printf "\n\n%40s\n" "${blue}Setup Finished\n ${normal}"

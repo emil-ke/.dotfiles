@@ -17,7 +17,7 @@ rm -rfv $CONF/alacritty
 
 rm -v ~/.bashrc
 
-rm -rf $CONF/Code\ -\ OSS
+rm -rfv $CONF/Code\ -\ OSS
 
 rm -rfv $CONF/fish
 
@@ -29,11 +29,7 @@ rm -v $CONF/starship.toml
 
 rm -v ~/.tmux.conf
 
-rm -v ~/.vimrc
-
-
 # stow all the dotfiles
-
 stow -v --dotfiles alacritty
 stow -v --dotfiles bash
 stow -v --dotfiles Code\ -\ OSS
@@ -43,7 +39,6 @@ stow -v --dotfiles nvim
 stow -v --dotfiles starship
 stow -v --dotfiles starship
 stow -v --dotfiles tmux
-stow -v --dotfiles vim
 
 # spicetify setup
 sudo chmod 777 /usr/share/spotify -R
