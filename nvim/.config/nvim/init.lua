@@ -1,19 +1,17 @@
-require('plugins')
-require('basics')
-require('colors')
-require('telescope-config')
-require('coc-config')
-require('lualine').setup()
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  context_commentstring = {
-    enable = true
-  },
-  highlight = {
-    enable = true
-  },
-  indent = {
-    enable = true
-  }
-}
-
+require 'user.basics'
+require "user.plugins"
+require "user.colorscheme"
+require "user.cmp"
+require "user.lsp"
+require "user.telescope"
+require "user.treesitter"
+require "user.autopairs"
+require "user.comment"
+require "user.gitsigns"
+require "user.nvim-tree"
+require "user.lualine"
+require "user.impatient"
+require "user.indentline"
+require "user.alpha"
+require "user.whichkey"
+require "user.autocommands"

@@ -39,23 +39,63 @@ packer.init {
 }
 -- Install plugins here
 return packer.startup(function(use)
+  -- My plugins here
   use 'wbthomason/packer.nvim'
   use "nvim-lua/popup.nvim"
-  use {'neoclide/coc.nvim', branch = 'release'}
+  use 'nvim-lua/plenary.nvim'
+  use "windwp/nvim-autopairs"
+  use "numToStr/Comment.nvim"
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
+  use "moll/vim-bbye"
+  use "lewis6991/impatient.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
+  use "goolord/alpha-nvim"
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  use "folke/which-key.nvim"
+
+  -- Colorscheme
   use 'folke/tokyonight.nvim'
-  use 'nvim-treesitter/nvim-treesitter'
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to Use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
+
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+  }
+
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'ThePrimeagen/git-worktree.nvim'
   use 'Vimjas/vim-python-pep8-indent'
   use 'ntpeters/vim-better-whitespace'
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+  use 'ThePrimeagen/git-worktree.nvim'
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
     'blackCauldron7/surround.nvim',
@@ -63,6 +103,7 @@ return packer.startup(function(use)
       require'surround'.setup {mappings_style = 'surround'}
     end
   }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

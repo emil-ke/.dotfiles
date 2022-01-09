@@ -1,10 +1,22 @@
-local telescope = require("telescope")
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+
 local keymap = vim.api.nvim_set_keymap
 
 telescope.setup{
+  defaults = {
+    prompt_prefix = "  ",
+    selection_caret = "  ",
+    path_display = { "smart" },
+  },
   pickers = {
     find_files = {
-      theme = "ivy",
+    theme = "ivy",
+      layout_config={
+        height = 36,
+      },
     }
   }
 }

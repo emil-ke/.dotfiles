@@ -14,7 +14,7 @@ local options = {
   fileencoding = 'utf-8',
   pumheight = 10,
   number  = true,
-  relativenumber = true,
+  relativenumber = false,
   wrap = false,
   expandtab = true ,
   incsearch = true,
@@ -73,7 +73,7 @@ keymap('n', '<leader>t', ':sp<CR> :term<CR> :resize 20N<CR> i', opts)  -- open t
 keymap('t', '<Esc>', '<C-\\><C-n>', opts)      -- makes sure esc key works in terminal
 
 -- better whitespace
-keymap('n', '<leader>w', ':StripWhitespace<CR>', opts)-- <leader>w to strip whitespace (remove whitespace)
+keymap('n', '<leader>ö', ':StripWhitespace<CR>', opts)-- <leader>w to strip whitespace (remove whitespace)
 
 -- move line up or down with alt-(up/down)
 keymap('n', '<A-Down>', ':m .+1<CR>', opts)
