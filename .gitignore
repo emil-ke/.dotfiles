@@ -8,3 +8,5 @@ Code\ -\ OSS/.config/Code\ -\ OSS/*
 !Code\ -\ OSS/.config/Code\ -\ OSS/User/settings.json
 !Code\ -\ OSS/.config/Code\ -\ OSS/User/keybindings.json
 
+nvim/.config/nvim/packer.nvim
+nvim/.config/nvim/lua/packer.nvim/
