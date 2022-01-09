@@ -8,7 +8,7 @@ printf "\n\n%40s\n" "${blue}Installing Dependencies \n\n ${normal}"
 
 # Install dependencies/packages
 
-sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs bat vim python pyenv neovim stow diff-so-fancy go
+sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs bat vim python pyenv neovim stow diff-so-fancy go
 
 #install yay
 
@@ -18,7 +18,6 @@ yay -S \
     nerd-fonts-fira-code \
     nerd-fonts-hack\
     spotify \
-    ccls-git
 
 
 # nvm install
