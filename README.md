@@ -44,48 +44,51 @@ I use arch linux and the install.sh script will only work for arch or arch-based
 - packer.nvim
 
 
-- arch packages
+ 
+ ### install the following if you don't want to use the install script/scripts 
+> arch packages
 
 ```console
 sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs npm bat vim python pyenv neovim stow diff-so-fancy go xsel
 ```
 
-- packages from aur
+> packages from aur
 
 ```console
 yay -S nerd-fonts-fira-code nerd-fonts-hack spotify 
 ```
 
-- nvm
+> nvm
 
 ```console
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 
-- fisher
+> fisher
 
 ```console
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
-- starship 
+> starship 
 
 ```console
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
-- pip 
+> pip 
 
 ```console
 pip install pynvim
 ```
 
-- npm
+> npm
+ 
 ```console
 sudo npm i -g neovim yarn
 ```
 
-- packer
+> packer
 
 ```console
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
