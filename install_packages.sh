@@ -11,7 +11,6 @@ printf "\n\n%40s\n" "${blue}Installing Dependencies \n\n ${normal}"
 sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs npm bat vim python pyenv neovim stow diff-so-fancy go xsel
 
 #install yay
-
 cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
 
 yay -S \

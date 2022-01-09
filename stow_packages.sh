@@ -37,7 +37,6 @@ stow -v --dotfiles fish
 stow -v --dotfiles git
 stow -v --dotfiles nvim
 stow -v --dotfiles starship
-stow -v --dotfiles starship
 stow -v --dotfiles tmux
 
 # spicetify setup
