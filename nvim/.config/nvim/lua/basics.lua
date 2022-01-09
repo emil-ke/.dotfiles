@@ -1,3 +1,9 @@
+-- Just variables for readability
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+-- leader key
+keymap('', ',', '<Nop>', opts)
 vim.g.mapleader = ','
 
 local options = {
@@ -46,28 +52,44 @@ vim.cmd 'set whichwrap+=<,>,[,],h,l'
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] --TODO: this doesn't seem to work
 
-vim.api.nvim_set_keymap('n', 'vs', ':vs<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'sp', ':sp<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-H>', '<C-W><C-H>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-K>', '<C-W><C-K>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-J>', '<C-W><C-J>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'tn', ':tabnew<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'tk', ':tabnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'tj', ':tabprev<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'to', ':tabo<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-S>', ':%s/', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-N>', ':Lexplore<CR> :vertical resize 30<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>t', ':sp<CR> :term<CR> :resize 20N<CR> i', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+keymap('n', 'vs', ':vs<CR>', opts)              -- vs to split vertically
+keymap('n', 'sp', ':sp<CR>', opts)              -- sp to split horizontally
+
+-- navigation between windows
+keymap('n', '<C-L>', '<C-W><C-L>', opts)
+keymap('n', '<C-H>', '<C-W><C-H>', opts)
+keymap('n', '<C-K>', '<C-W><C-K>', opts)
+keymap('n', '<C-J>', '<C-W><C-J>', opts)
+
+keymap('n', 'tn', ':tabnew<CR>', opts)         -- tn to open new tab
+keymap('n', 'tk', ':tabnext<CR>', opts)        -- tk - move to next tab
+keymap('n', 'tj', ':tabprev<CR>', opts)        -- tj - more to prev tab
+keymap('n', 'to', ':tabo<CR>', opts)           -- close all other open tabs
+
+keymap('n', '<C-S>', ':%s/', opts)             -- replace string (syntax *string to be replaced*/*new string*)
+keymap('n', '<C-N>', ':Lexplore<CR> :vertical resize 30<CR>', opts)    -- open file exlorer
+keymap('n', '<leader>t', ':sp<CR> :term<CR> :resize 20N<CR> i', opts)  -- open terminal
+keymap('t', '<Esc>', '<C-\\><C-n>', opts)      -- makes sure esc key works in terminal
 
 -- better whitespace
-vim.api.nvim_set_keymap('n', 'öä', ':StripWhitespace<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>w', ':StripWhitespace<CR>', opts)-- <leader>w to strip whitespace (remove whitespace)
+
 -- move line up or down with alt-(up/down)
-vim.api.nvim_set_keymap('n', '<A-Down>', ':m .+1<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-Up>', ':m .-2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<A-Down>', ':m .+1<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<A-Up>', ':m .-1<CR>', { noremap = true, silent = true })
+keymap('n', '<A-Down>', ':m .+1<CR>', opts)
+keymap('n', '<A-Up>', ':m .-2<CR>', opts)
+keymap('v', '<A-Down>', ':m .+1<CR>', opts)
+keymap('v', '<A-Up>', ':m .-2<CR>', opts)
+
+-- indent
+keymap('v', '<', '<gv', opts)
+keymap('v', '>', '>gv', opts)
+keymap('n', '<', '<gv', opts)
+keymap('n', '>', '>gv', opts)
+
+-- when you yank something and overwrite something else nvim normally kind of yanks whatever you overwrite,
+-- this command makes sure you keep whatever you originally yanked
+keymap('v', 'p', '"_dP', opts)
 
 vim.g['netrw_winsize'] = 25
 vim.g['netrw_liststyle'] = 3
