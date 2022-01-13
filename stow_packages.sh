@@ -1,14 +1,8 @@
 #!/bin/bash
 
-blue=$(tput setaf 4)
-normal=$(tput sgr0)
-
-printf "\n\n${blue}stowing packages (stow <package>)${normal} \n\n"
-
 # rm directory/file if it exists (stow won't work properly if there already exists a file)
-## rm obiously checks if there exists a file/dir to remove so this is fine
-## but could be improved by checking before hand since this (my) approach throws an error if no dir/file exists
-
+# rm obiously checks if there exists a file/dir to remove so this is fine
+# but could be improved by checking before hand since this (my) approach throws an error if no dir/file exists
 
 CONF=~/.config
 
@@ -38,9 +32,4 @@ stow -v --dotfiles git
 stow -v --dotfiles nvim
 stow -v --dotfiles starship
 stow -v --dotfiles tmux
-
-# spicetify setup
-sudo chmod 777 /usr/share/spotify -R
-spicetify backup apply
-
 
