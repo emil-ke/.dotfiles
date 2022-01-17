@@ -7,6 +7,7 @@ keymap('', ',', '<Nop>', opts)
 vim.g.mapleader = ','
 
 local options = {
+  syntax = 'on',
   backup = false,
   clipboard = 'unnamedplus',
   cmdheight = 2,
@@ -16,7 +17,7 @@ local options = {
   number  = true,
   relativenumber = false,
   wrap = false,
-  expandtab = true ,
+  expandtab = true,
   incsearch = true,
   tabstop = 2,
   cursorline = true,
@@ -68,7 +69,6 @@ keymap('n', 'tj', ':tabprev<CR>', opts)        -- tj - more to prev tab
 keymap('n', 'to', ':tabo<CR>', opts)           -- close all other open tabs
 
 keymap('n', '<C-S>', ':%s/', opts)             -- replace string (syntax *string to be replaced*/*new string*)
-keymap('n', '<C-N>', ':Lexplore<CR> :vertical resize 30<CR>', opts)    -- open file exlorer
 keymap('n', '<leader>t', ':sp<CR> :term<CR> :resize 20N<CR> i', opts)  -- open terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', opts)      -- makes sure esc key works in terminal
 
