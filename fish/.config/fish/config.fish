@@ -50,8 +50,6 @@ abbr -a files nautilus
 abbr -a c clear
 
 abbr -a cat bat
-abbr -a fzfbat "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
-
 
 # Make directory and cd into it
 function mkcd

@@ -9,7 +9,7 @@ function gitlfzf
         --abbrev=7 \
         --graph \
         --format="%C(cyan)%h %C(blue)%ar%C(auto)%d %C(yellow)%s%+b %C(black)%ae" |
-        fzf -i -e +s \
+        fzf -i -e \
             --reverse \
             --tiebreak=index \
             --no-multi \
