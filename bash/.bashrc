@@ -2,9 +2,6 @@
 # ~/.bashrc
 #
 
-
-
-
 [[ $- != *i* ]] && return
 
 colors() {
@@ -103,11 +100,8 @@ unset use_color safe_term match_lhs sh
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias free='free -h'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
-alias more=less
-
-alias python='python3.10'
 
 xhost +local:root > /dev/null 2>&1
 
@@ -149,7 +143,6 @@ ex ()
   fi
 }
 
-
 # Set fish as interactive shell
 if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
@@ -157,7 +150,6 @@ then
 fi
 
 # ~/.bashrc, starship init
-
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
 
