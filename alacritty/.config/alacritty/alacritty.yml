@@ -114,7 +114,7 @@ font:
 bell:
   animation: EaseOutExpo
   duration: 0
-background_opacity: 1
+window.opacity: 1
 mouse_bindings:
   - mouse: Middle
     action: PasteSelection
