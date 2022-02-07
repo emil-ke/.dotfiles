@@ -92,6 +92,11 @@ return packer.startup(function(use)
   use 'Vimjas/vim-python-pep8-indent'
   use 'ntpeters/vim-better-whitespace'
 
+  use {
+    'prettier/vim-prettier',
+    run = 'yarn install',
+    ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
+  }
   -- Git
   use "lewis6991/gitsigns.nvim"
   use 'ThePrimeagen/git-worktree.nvim'
