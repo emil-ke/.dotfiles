@@ -83,7 +83,8 @@ if ${use_color} ; then
 		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
-	alias ls='ls --color=auto'
+	alias ls='exa --group-directories-first --color=auto'
+  alias ll='exa -ali --group-directories-first --color=auto'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
@@ -151,7 +152,6 @@ fi
 
 # ~/.bashrc, starship init
 eval "$(starship init bash)"
-. "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(pyenv init -)"
