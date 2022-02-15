@@ -1,4 +1,4 @@
--- Just variables for readability
+-- variables for readability
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -18,11 +18,11 @@ local options = {
   relativenumber = false,
   wrap = false,
   expandtab = true,
-  incsearch = true,
   tabstop = 2,
   cursorline = true,
   ignorecase = true,
-  hlsearch = false,
+  smartcase = true,
+  hlsearch = true,
   swapfile = false,
   splitbelow = true,
   splitright = true,
@@ -35,7 +35,7 @@ local options = {
   signcolumn = 'yes',
   showmode = false,
   mouse = 'a',
-  smartindent = true,
+  smartindent = false,
   timeoutlen = 100,
   undofile = true,
   updatetime = 300,
@@ -54,6 +54,7 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] --TODO: this doesn't seem to work
 
 
+
 keymap('n', 'vs', ':vs<CR>', opts)              -- vs to split vertically
 keymap('n', 'sp', ':sp<CR>', opts)              -- sp to split horizontally
 
@@ -64,7 +65,7 @@ keymap('n', '<C-K>', '<C-W><C-K>', opts)
 keymap('n', '<C-J>', '<C-W><C-J>', opts)
 
 keymap('n', 'tn', ':tabnew<CR>', opts)         -- tn to open new tab
-keymap('n', 'tk', ':tabnext<CR>', opts)        -- tk - move to next tab
+keymap('n', 'tk', ':tabnext<CR>', opts)       -- tk - move to next tab
 keymap('n', 'tj', ':tabprev<CR>', opts)        -- tj - more to prev tab
 keymap('n', 'to', ':tabo<CR>', opts)           -- close all other open tabs
 
@@ -91,5 +92,11 @@ keymap('n', '>', '>gv', opts)
 -- this command makes sure you keep whatever you originally yanked
 keymap('v', 'p', '"_dP', opts)
 
+
+-- Formating
+keymap("n", "fo", ":Format<CR>", opts)
+
 vim.g['netrw_winsize'] = 25
 vim.g['netrw_liststyle'] = 3
+
+

@@ -64,6 +64,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-emoji"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -104,12 +106,6 @@ return packer.startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-  use {
-    'blackCauldron7/surround.nvim',
-    config = function()
-      require'surround'.setup {mappings_style = 'surround'}
-    end
   }
 
   if PACKER_BOOTSTRAP then
