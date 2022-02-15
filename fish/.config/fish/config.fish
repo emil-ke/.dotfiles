@@ -15,14 +15,7 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
-
-### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-# set fish_color_normal brcyan
-# set fish_color_autosuggestion '#95a4ad'
-# set fish_color_command brcyan
-# set fish_color_error '#ff6c6b'
-# set fish_color_param brcyan
-
+set -x PATH $PATH $HOME/.cargo/bin
 
 # navigation
 abbr -a .. cd ..
