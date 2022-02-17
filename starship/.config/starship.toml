@@ -1,5 +1,6 @@
 # ~/.config/starship.toml
 
+
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
 
@@ -7,7 +8,7 @@ scan_timeout = 10
 error_symbol = "[✗](bold red) "
 
 [cmd_duration]
-min_time = 20_000  # Show command duration over 20,000 milliseconds (=20 sec)
+min_time = 20_000  # Show command duration over 20,000 milliseconds
 format = " took [$duration]($style)"
 
 [directory]
@@ -60,3 +61,4 @@ disabled = true
 style_user = "bold blue"
 show_always = false
 format = "[$user]($style) in: "
+
