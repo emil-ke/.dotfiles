@@ -10,6 +10,7 @@ telescope.setup{
     prompt_prefix = "  ",
     selection_caret = "  ",
     path_display = { "smart" },
+    sorting_strategy = "ascending",
   },
   pickers = {
     find_files = {
