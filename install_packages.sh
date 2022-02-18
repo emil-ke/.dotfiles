@@ -2,9 +2,9 @@
 
 
 # Install dependencies/packages
-sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv python-jedi neovim stow diff-so-fancy go xsel
+sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv python-jedi neovim stow diff-so-fancy go xsel
 
-#install yay
+# Install yay
 cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
 
 yay -S \
@@ -18,13 +18,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 # fisher install (Plugin manager for fish)
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
-# starship install
+# install starship
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
-# Pip
+# python neovim support
 pip install pynvim
 
-# Npm install
+# npm install
 sudo npm i -g neovim yarn
 
 # packer install
