@@ -39,7 +39,6 @@ abbr -a gitl "git log --color=always -n 10 --format='%C(cyan)%h %C(blue)%ar%C(au
 abbr -a files nautilus
 abbr -a c clear
 abbr -a cat bat
-abbr -a df df -h
 
 # starship init
 starship init fish | source
