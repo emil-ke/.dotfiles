@@ -2,7 +2,7 @@
 
 
 # Install dependencies/packages
-sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv python-jedi neovim stow diff-so-fancy go xsel
+sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip neovim stow diff-so-fancy go xsel wget tmux
 
 # Install yay
 cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
@@ -24,7 +24,7 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 # python neovim support
 pip install pynvim
 
-# npm install
+# npm
 sudo npm i -g neovim yarn
 
 # packer install
