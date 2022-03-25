@@ -1,7 +1,7 @@
 # .dotfiles
 
 
-I use arch linux and the install.sh script will only work for arch or arch-based systems since it utilizes pacman (archs package manager)
+the install.sh script will only work for arch or arch-based systems since it utilizes pacman (archs package manager)
 
 
 ## Install
@@ -10,8 +10,6 @@ I use arch linux and the install.sh script will only work for arch or arch-based
 ./install.sh
 ```
 
-> Encase you only want to install packages or only stow packages, then you have to chmod +x*<file>*for which ever *file* you'd want to run. (If you for some reason would rather do this you have to do additional setup, look in install.sh script for more info)
-
 ### Encase something went wrong
 
 #### Dependencies/packages 
@@ -19,7 +17,6 @@ I use arch linux and the install.sh script will only work for arch or arch-based
 > check install_packages.sh whether or not this is up to date
 
 - alacritty
-- stow
 - fzf
 - code
 - exa
@@ -30,35 +27,25 @@ I use arch linux and the install.sh script will only work for arch or arch-based
 - bat
 - vim
 - python
+- python-pip
 - pyenv
 - neovim
+- stow
 - diff-so-fancy
 - go
+- xsel
+- wget
+- tmux
 - nerd-fonts-fira-code
 - nerd-fonts-hack
-- spotify
-- ccls
 - nvm
 - fisher
 - starship
 - packer.nvim
 
 
- 
- ### install the following if you don't want to use the install script/scripts 
-> arch packages
-
-```console
-sudo pacman -S --needed ccls alacritty fzf code exa zoxide fish nodejs npm bat vim python pyenv neovim stow diff-so-fancy go xsel
-```
-
-> packages from aur
-
-```console
-yay -S nerd-fonts-fira-code nerd-fonts-hack spotify 
-```
-
 > nvm
+
 
 ```console
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -97,12 +84,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 #### stow packages after install (remove directories/files for each before stowing)
 ```console
-stow -v --dotfiles alacritty; \
-stow -v --dotfiles bash; \
-stow -v --dotfiles Code\ -\ OSS; \
-stow -v --dotfiles fish; \
-stow -v --dotfiles git; \
-stow -v --dotfiles nvim; \
-stow -v --dotfiles starship; \
-stow -v --dotfiles tmux 
+stow -v --dotfiles alacritty bash Code\ -\ OSS fish git nvim starship tmux
 ```
