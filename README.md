@@ -10,7 +10,7 @@ the install.sh script will only work for arch or arch-based systems since it uti
 ./install.sh
 ```
 
-### Encase something went wrong
+### Manual Install
 
 #### Dependencies/packages 
 
@@ -43,6 +43,12 @@ the install.sh script will only work for arch or arch-based systems since it uti
 - starship
 - packer.nvim
 
+> pacman
+```console
+sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv neovim stow diff-so-fancy go xsel wget tmux
+```
+
+install yay and a nerd font (for alacritty- and starship config)
 
 > nvm
 
