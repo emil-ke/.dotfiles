@@ -4,7 +4,6 @@ set -U fish_greeting
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
-### ADDING TO THE PATH
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
