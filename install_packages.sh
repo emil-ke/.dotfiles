@@ -6,9 +6,9 @@ sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim py
 
 # Install yay if not already installed
 if pacman -Qs yay > /dev/null ; then
-  cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
-else
   echo "yay is already installed"
+else
+  cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
 fi
   yay -S \
     nerd-fonts-fira-code \
