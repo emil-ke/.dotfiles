@@ -6,23 +6,8 @@
 # error if no dir/file exists (TODO)
 CONF=~/.config
 
-rm -rfv $CONF/alacritty
-rm -v ~/.bashrc
-rm -rfv $CONF/Code\ -\ OSS
-rm -rfv $CONF/fish
-rm -v ~/.gitconfig
-rm -rfv $CONF/nvim
-rm -v $CONF/starship.toml
-rm -v ~/.tmux.conf
+rm -rfv {$CONF/alacritty, $CONF/Code\ -\ OSS, $CONF/fish, $CONF/nvim}
+rm -v {~/.gitconfig, ~/.bashrc, $CONF/starship.toml, ~/.tmux.conf}
 
 # stow all the dotfiles
-stow -v --dotfiles alacritty
-stow -v --dotfiles bash
-stow -v --dotfiles Code\ -\ OSS
-stow -v --dotfiles fish
-stow -v --dotfiles git
-stow -v --dotfiles nvim
-stow -v --dotfiles spicetify
-stow -v --dotfiles starship
-stow -v --dotfiles tmux
-
+stow -v --dotfiles {alacritty, bash, Code\ -\ OSS, fish, git, nvim, starship, tmux}
