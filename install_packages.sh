@@ -2,15 +2,18 @@
 
 
 # Install dependencies/packages
-sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip neovim stow diff-so-fancy go xsel wget tmux
+sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv neovim stow diff-so-fancy go xsel wget tmux
 
-# Install yay
-cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
-
-yay -S \
+# Install yay if not already installed
+if pacman -Qs yay > /dev/null ; then
+  cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
+else
+  echo "yay is already installed"
+fi
+  yay -S \
     nerd-fonts-fira-code \
     nerd-fonts-hack\
-    spotify \
+    spotify
 
 # nvm install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
