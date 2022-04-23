@@ -2,9 +2,9 @@ vim.cmd([[
   augroup _general_settings
     autocmd!
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR> 
-    autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
+    autocmd CmdWinEnter * quit
   augroup end
 
   augroup _git
@@ -30,7 +30,12 @@ vim.cmd([[
   augroup end
 
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+  autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
 ]])
+
+vim.api.nvim_create_autocmd({"TextYankPost"}, {
+  callback = function() vim.highlight.on_yank({higroup = 'Visual', timeout = 200}) end,  -- Or myvimfun
+})
 
 -- Autoformat
 -- augroup _lsp
