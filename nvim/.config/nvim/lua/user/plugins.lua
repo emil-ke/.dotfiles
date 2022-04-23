@@ -39,7 +39,6 @@ packer.init({
 })
 -- Install plugins here
 return packer.startup(function(use)
-  -- My plugins here
   use("wbthomason/packer.nvim")
   use("nvim-lua/popup.nvim")
   use("nvim-lua/plenary.nvim")
@@ -67,6 +66,7 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-emoji")
   use("hrsh7th/cmp-nvim-lua")
 
+  -- go
   use("ray-x/go.nvim")
 
   -- snippets
@@ -90,7 +90,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   })
 
-  use({ "akinsho/toggleterm.nvim" })
+  use("akinsho/toggleterm.nvim")
   use("tpope/vim-commentary")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("Vimjas/vim-python-pep8-indent")
