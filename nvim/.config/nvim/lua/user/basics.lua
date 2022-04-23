@@ -96,6 +96,7 @@ keymap('v', 'p', '"_dP', opts)
 
 -- Formating
 keymap("n", "fo", ":Format<CR>", opts)
+keymap("v", "fo", ":Format<CR>", opts)
 
 vim.g['netrw_winsize'] = 25
 vim.g['netrw_liststyle'] = 3
