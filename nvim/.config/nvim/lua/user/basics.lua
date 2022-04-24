@@ -82,10 +82,10 @@ keymap("t", "<Esc>", "<C-\\><C-n>", opts) -- makes sure esc key works in termina
 keymap("n", "<leader>ö", ":StripWhitespace<CR>", opts) -- <leader>w to strip whitespace (remove whitespace)
 
 -- move line up or down with
-keymap("n", "<A-Down>", ":m .+1<CR>==", opts)
-keymap("n", "<A-Up>", ":m .-2<CR>==", opts)
-keymap("v", "<A-Down>", ":m .+1<CR>==", opts)
-keymap("v", "<A-Up>", ":m .-2<CR>==", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Visual Block --
 -- Move text up and down
