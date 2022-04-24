@@ -95,5 +95,7 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "fo", ":Format<CR>", opts)
 keymap("v", "fo", ":Format<CR>", opts)
 
+keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
+
 vim.g["netrw_winsize"] = 25
 vim.g["netrw_liststyle"] = 3
