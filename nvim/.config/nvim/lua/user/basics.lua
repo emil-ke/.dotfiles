@@ -63,6 +63,12 @@ keymap("n", "<C-H>", "<C-W><C-H>", opts)
 keymap("n", "<C-K>", "<C-W><C-K>", opts)
 keymap("n", "<C-J>", "<C-W><C-J>", opts)
 
+-- Resize with arrows
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
 keymap("n", "tn", ":tabnew<CR>", opts) -- tn to open new tab
 keymap("n", "tk", ":tabnext<CR>", opts) -- tk - move to next tab
 keymap("n", "tj", ":tabprev<CR>", opts) -- tj - more to prev tab
@@ -75,11 +81,18 @@ keymap("t", "<Esc>", "<C-\\><C-n>", opts) -- makes sure esc key works in termina
 -- better whitespace
 keymap("n", "<leader>ö", ":StripWhitespace<CR>", opts) -- <leader>w to strip whitespace (remove whitespace)
 
--- move line up or down with alt-(up/down)
-keymap("n", "<A-Down>", ":m .+1<CR>", opts)
-keymap("n", "<A-Up>", ":m .-2<CR>", opts)
-keymap("v", "<A-Down>", ":m .+1<CR>", opts)
-keymap("v", "<A-Up>", ":m .-2<CR>", opts)
+-- move line up or down with
+keymap("n", "<A-Down>", ":m .+1<CR>==", opts)
+keymap("n", "<A-Up>", ":m .-2<CR>==", opts)
+keymap("v", "<A-Down>", ":m .+1<CR>==", opts)
+keymap("v", "<A-Up>", ":m .-2<CR>==", opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- indent
 keymap("v", "<", "<gv", opts)
