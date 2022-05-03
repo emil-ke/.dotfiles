@@ -15,7 +15,7 @@ configs.setup({
 		disable = { "" }, -- list of language that will be disabled
 		additional_vim_regex_highlighting = true,
 	},
-	indent = { enable = true, disable = { "yaml" } },
+	indent = { enable = true, disable = { "python" } },
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
@@ -26,12 +26,13 @@ configs.setup({
 		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
 		max_file_lines = nil, -- Do not enable for files with more than n lines, int
 		colors = {
-      "#2bc0ff",
+      "#007ecc",
       "#faff73",
       "#e354ff",
       "#11bf9c",
       "#ed6f95",
-      "#f5823b"
+      "#f5823b",
+      "#4e7a6a",
     },
 		-- termcolors = {} -- table of colour name strings
 	},

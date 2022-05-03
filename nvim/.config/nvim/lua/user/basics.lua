@@ -35,8 +35,8 @@ local options = {
 	signcolumn = "yes",
 	showmode = false,
 	mouse = "a",
-	smartindent = false,
-	timeoutlen = 100,
+	smartindent = true,
+	timeoutlen = 150,
 	undofile = true,
 	updatetime = 300,
 	writebackup = false,
@@ -109,6 +109,10 @@ keymap("n", "fo", ":Format<CR>", opts)
 keymap("v", "fo", ":Format<CR>", opts)
 
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
+-- stop highlighting search thingy
+keymap("n", "<leader><esc>", "<cmd>nohlsearch<cr>", opts)
+
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 vim.g["netrw_winsize"] = 25
 vim.g["netrw_liststyle"] = 3

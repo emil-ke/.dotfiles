@@ -1,19 +1,13 @@
 [user]
 	name = Emil Bertlin
-	email = 75381427+emilbertlin@users.noreply.github.com
-	username = emilbertlin
+	email = 75381427+emil-ke@users.noreply.github.com
+	username = emil-ke
 [core]
-	editor = code
+	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	pager = delta
-[sendemail]
-	smtpencryption = tls
-	smtpserver = smtp.gmail.com
-	smtpuser = pavan.sss1991@gmail.com
-	smtppass = password
-	smtpserverport = 587
 [web]
-	browser = google-chrome
+	browser = brave
 [instaweb]
 	httpd = apache2 -f
 [rerere]
@@ -59,7 +53,7 @@
 	plus-empty-line-marker-style = normal normal
 	line-numbers-right-format = "{np:^4}│ "
 [gitflow "prefix"]
-	versiontag = v 
+	versiontag = v
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
