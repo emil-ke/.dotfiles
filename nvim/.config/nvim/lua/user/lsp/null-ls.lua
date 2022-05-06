@@ -14,11 +14,22 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier,
-    diagnostics.eslint,
-    code_actions.eslint,
-		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.stylua,
-		diagnostics.flake8,
+    formatting.stylua,
+    formatting.black.with({ extra_args = { "--fast" } }),
+    formatting.prettier.with({
+        prefer_local = "node_modules/.bin",
+    }),
+    formatting.eslint.with({
+        prefer_local = "node_modules/.bin",
+    }),
+    diagnostics.eslint.with({
+        prefer_local = "node_modules/.bin",
+    }),
+    diagnostics.flake8.with({
+        prefer_local = ".venv/bin",
+    }),
+    code_actions.eslint.with {
+      prefer_local = "node_modules/.bin"
+    },
 	},
 })
