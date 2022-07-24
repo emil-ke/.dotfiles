@@ -96,7 +96,6 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 	use("tpope/vim-commentary")
 	use("Vimjas/vim-python-pep8-indent")
-	use("ntpeters/vim-better-whitespace")
 	use("folke/zen-mode.nvim")
 
 	use({
