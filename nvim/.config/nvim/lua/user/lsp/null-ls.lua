@@ -22,6 +22,7 @@ null_ls.setup({
 		formatting.eslint.with({
 			prefer_local = "node_modules/.bin",
 		}),
+		formatting.google_java_format,
 		diagnostics.eslint.with({
 			prefer_local = "node_modules/.bin",
 		}),

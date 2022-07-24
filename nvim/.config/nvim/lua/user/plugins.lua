@@ -80,6 +80,7 @@ return packer.startup(function(use)
 	use("b0o/SchemaStore.nvim")
 
 	use("nvim-lua/completion-nvim")
+	use("mfussenegger/nvim-jdtls")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")

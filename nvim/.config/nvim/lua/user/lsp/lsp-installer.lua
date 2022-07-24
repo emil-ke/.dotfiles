@@ -10,6 +10,7 @@ local servers = {
 	"emmet_ls",
 	"gopls",
 	"html",
+	"jdtls",
 	"jsonls",
 	"pyright",
 	"sumneko_lua",
