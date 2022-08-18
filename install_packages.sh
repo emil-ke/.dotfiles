@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#TODO: update this
 
 # Install dependencies/packages
 sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv neovim stow diff-so-fancy go xsel wget tmux
@@ -10,12 +11,13 @@ if pacman -Qs yay > /dev/null ; then
 else
   cd ~/Downloads; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; rm -rf ~/Downloads/yay
 fi
-  yay -S \
-    nerd-fonts-fira-code \
-    nerd-fonts-hack\
-    spotify
 
-# nvm install
+yay -S \
+  nerd-fonts-fira-code \
+  nerd-fonts-hack\
+  spotify
+
+# install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # fisher install (Plugin manager for fish)
