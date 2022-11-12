@@ -5,6 +5,7 @@ local opts = { noremap = true, silent = true }
 -- leader key
 keymap("", ",", "<Nop>", opts)
 vim.g.mapleader = ","
+vim.g.vimtex_view_method = 'zathura'
 
 local options = {
 	syntax = "on",
@@ -114,5 +115,8 @@ keymap("n", "<leader><esc>", "<cmd>nohlsearch<cr>", opts)
 
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
+keymap("n", "<leader>q", ":!zathura <C-r>=expand('%:r')<cr>.pdf &<cr>", opts)
+
 vim.g["netrw_winsize"] = 25
 vim.g["netrw_liststyle"] = 3
+

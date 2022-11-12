@@ -36,7 +36,7 @@ abbr -a gitl "git log --color=always -n 10 --format='%C(cyan)%h %C(blue)%ar%C(au
 # Other abbreviations
 abbr -a files nautilus
 abbr -a cat bat
-abbr -a vim nvim
+abbr -a vim lvim
 
 # starship init
 starship init fish | source
