@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#TODO: update this
+# This is not up to date!!!
+# TODO: update this
 
 # Install dependencies/packages
 sudo pacman -S --needed alacritty fzf code exa zoxide fish nodejs npm bat vim python python-pip pyenv neovim stow diff-so-fancy go xsel wget tmux

@@ -1,8 +1,7 @@
 # .dotfiles
 
 
-the install.sh script will only work for arch or arch-based systems since it utilizes pacman (archs package manager)
-
+The install.sh script will only work for arch or arch-based systems since it uses pacman to install the dependencies
 
 ## Install
 
@@ -42,6 +41,7 @@ the install.sh script will only work for arch or arch-based systems since it uti
 - fisher
 - starship
 - packer.nvim
+- lvim
 
 > pacman
 ```console
@@ -90,5 +90,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 #### stow packages after install (remove directories/files for each before stowing)
 ```console
-stow -v --dotfiles alacritty bash Code\ -\ OSS fish git nvim starship tmux
+stow -v --dotfiles alacritty bash Code\ -\ OSS fish git nvim starship tmux lvim
 ```

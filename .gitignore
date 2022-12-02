@@ -1,7 +1,3 @@
-spicetify/.config/spicetify/Backup
-
-spicetify/.config/spicetify/Extracted
-
 fish/.config/fish/fish_variables
 
 Code\ -\ OSS/.config/Code\ -\ OSS/*
@@ -10,3 +6,6 @@ Code\ -\ OSS/.config/Code\ -\ OSS/*
 
 nvim/.config/nvim/packer.nvim
 nvim/.config/nvim/lua/packer.nvim/
+
+lvim/.config/lvim/plugin/*
+lvim/.config/lvim/lv-settings.lua
