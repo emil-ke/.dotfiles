@@ -38,6 +38,7 @@ abbr -a files nautilus
 abbr -a cat bat
 abbr -a vim lvim
 abbr -a vi lvim
+abbr -a cd z
 
 # starship init
 starship init fish | source
