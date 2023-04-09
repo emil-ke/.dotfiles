@@ -6,7 +6,6 @@ filled in as strings with either
 a global executable or a path to
 an executable
 ]]
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
@@ -22,54 +21,54 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.leader = ","
 
 local options = {
-    backup = false, -- creates a backup file
-    clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-    cmdheight = 2, -- more space in the neovim command line for displaying messages
-    colorcolumn = "99999", -- fixes indentline for now
-    completeopt = { "menuone", "noselect" },
-    conceallevel = 0, -- so that `` is visible in markdown files
-    fileencoding = "utf-8", -- the encoding written to a file
-    foldmethod = "manual", -- folding set to "expr" for treesitter based folding
-    foldexpr = "", -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
-    guifont = "monospace:h17", -- the font used in graphical neovim applications
-    hidden = true, -- required to keep multiple buffers and open multiple buffers
-    hlsearch = true, -- highlight all matches on previous search pattern
-    ignorecase = true, -- ignore case in search patterns
-    mouse = "a", -- allow the mouse to be used in neovim
-    pumheight = 10, -- pop up menu height
-    showmode = false, -- we don't need to see things like -- INSERT -- anymore
-    showtabline = 2, -- always show tabs
-    smartcase = true, -- smart case
-    smartindent = true, -- make indenting smarter again
-    splitbelow = true, -- force all horizontal splits to go below current window
-    splitright = true, -- force all vertical splits to go to the right of current window
-    swapfile = false, -- creates a swapfile
-    termguicolors = true, -- set term gui colors (most terminals support this)
-    timeoutlen = 100, -- time to wait for a mapped sequence to complete (in milliseconds)
-    title = true, -- set the title of window to the value of the titlestring
-    titlestring = "%<%F%=%l/%L - nvim", -- what the title of the window will be set to
-    undodir = vim.fn.stdpath "cache" .. "/undo",
-    undofile = true, -- enable persistent undo
-    updatetime = 300, -- faster completion
-    writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
-    expandtab = true, -- convert tabs to spaces
-    shiftwidth = 2, -- the number of spaces inserted for each indentation
-    tabstop = 2, -- insert 2 spaces for a tab
-    cursorline = true, -- highlight the current line
-    number = true, -- set numbered lines
-    relativenumber = false, -- set relative numbered lines
-    numberwidth = 4, -- set number column width to 2 {default 4}
-    signcolumn = "yes", -- always show the sign column otherwise it would shift the text each time
-    wrap = false, -- display lines as one long line
-    spell = false,
-    spelllang = "en",
-    scrolloff = 8, -- is one of my fav
-    sidescrolloff = 8,
+  backup = false,                       -- creates a backup file
+  clipboard = "unnamedplus",            -- allows neovim to access the system clipboard
+  cmdheight = 2,                        -- more space in the neovim command line for displaying messages
+  colorcolumn = "99999",                -- fixes indentline for now
+  completeopt = { "menuone", "noselect" },
+  conceallevel = 0,                     -- so that `` is visible in markdown files
+  fileencoding = "utf-8",               -- the encoding written to a file
+  foldmethod = "manual",                -- folding set to "expr" for treesitter based folding
+  foldexpr = "",                        -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
+  guifont = "monospace:h17",            -- the font used in graphical neovim applications
+  hidden = true,                        -- required to keep multiple buffers and open multiple buffers
+  hlsearch = true,                      -- highlight all matches on previous search pattern
+  ignorecase = true,                    -- ignore case in search patterns
+  mouse = "a",                          -- allow the mouse to be used in neovim
+  pumheight = 10,                       -- pop up menu height
+  showmode = false,                     -- we don't need to see things like -- INSERT -- anymore
+  showtabline = 2,                      -- always show tabs
+  smartcase = true,                     -- smart case
+  smartindent = true,                   -- make indenting smarter again
+  splitbelow = true,                    -- force all horizontal splits to go below current window
+  splitright = true,                    -- force all vertical splits to go to the right of current window
+  swapfile = false,                     -- creates a swapfile
+  termguicolors = true,                 -- set term gui colors (most terminals support this)
+  timeoutlen = 100,                     -- time to wait for a mapped sequence to complete (in milliseconds)
+  title = true,                         -- set the title of window to the value of the titlestring
+  titlestring = "%<%F%=%l/%L - nvim",   -- what the title of the window will be set to
+  undodir = vim.fn.stdpath "cache" .. "/undo",
+  undofile = true,                      -- enable persistent undo
+  updatetime = 300,                     -- faster completion
+  writebackup = false,                  -- if a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
+  expandtab = true,                     -- convert tabs to spaces
+  shiftwidth = 2,                       -- the number of spaces inserted for each indentation
+  tabstop = 2,                          -- insert 2 spaces for a tab
+  cursorline = true,                    -- highlight the current line
+  number = true,                        -- set numbered lines
+  relativenumber = false,               -- set relative numbered lines
+  numberwidth = 4,                      -- set number column width to 2 {default 4}
+  signcolumn = "yes",                   -- always show the sign column otherwise it would shift the text each time
+  wrap = false,                         -- display lines as one long line
+  spell = false,
+  spelllang = "en",
+  scrolloff = 8,   -- is one of my fav
+  sidescrolloff = 8,
 }
 
 vim.opt.shortmess:append("c")
 
-for k,v in pairs(options) do
+for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
@@ -87,19 +86,19 @@ lvim.keys.normal_mode["<C-z>"] = "<cmd>ZenMode<cr>"
 local _, actions = pcall(require, "telescope.actions")
 local _, builtin = pcall(require, "telescope.builtin")
 lvim.builtin.telescope.defaults.mappings = {
-   -- for input mode
-   i = {
-     ["<C-j>"] = actions.move_selection_next,
-     ["<C-k>"] = actions.move_selection_previous,
-     ["<C-n>"] = actions.cycle_history_next,
-     ["<C-p>"] = actions.cycle_history_prev,
-   },
-   -- for normal mode
-   n = {
-     ["<C-j>"] = actions.move_selection_next,
-     ["<C-k>"] = actions.move_selection_previous,
-   },
- }
+  -- for input mode
+  i = {
+    ["<C-j>"] = actions.move_selection_next,
+    ["<C-k>"] = actions.move_selection_previous,
+    ["<C-n>"] = actions.cycle_history_next,
+    ["<C-p>"] = actions.cycle_history_prev,
+  },
+  -- for normal mode
+  n = {
+    ["<C-j>"] = actions.move_selection_next,
+    ["<C-k>"] = actions.move_selection_previous,
+  },
+}
 
 lvim.builtin.telescope.pickers = {
   find_files = {
@@ -111,9 +110,9 @@ lvim.builtin.telescope.pickers = {
 }
 
 lvim.keys.normal_mode['<C-p>'] = builtin.find_files
-lvim.keys.normal_mode['<C-f>']= builtin.live_grep
-lvim.keys.normal_mode['<C-b>']= builtin.buffers
-lvim.keys.normal_mode['<C-t>']= builtin.help_tags
+lvim.keys.normal_mode['<C-f>'] = builtin.live_grep
+lvim.keys.normal_mode['<C-b>'] = builtin.buffers
+lvim.keys.normal_mode['<C-t>'] = builtin.help_tags
 
 
 -- Change theme settings
@@ -206,7 +205,11 @@ lvim.builtin.treesitter.highlight.enable = true
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
+  {
+    command = "uncrustify",
+    filetypes = { "java" },
+    extra_args = { "-c", "path/to/your.cfg" },
+  }
   -- {
   --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
   --   command = "prettier",
