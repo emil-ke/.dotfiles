@@ -72,6 +72,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd("autocmd FileType java setlocal ts=4 sw=4 sts=4")
+
 lvim.keys.normal_mode["<C-z>"] = "<cmd>ZenMode<cr>"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
