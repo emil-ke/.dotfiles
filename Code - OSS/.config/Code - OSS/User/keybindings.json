@@ -16,17 +16,17 @@
     "when": "terminal.active"
   },
   {
-    "key": "ctrl+h",
+    "key": "ctrl+alt+h",
     "command": "workbench.action.focusPreviousGroup",
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+alt+l",
     "command": "workbench.action.focusNextGroup",
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+h",
+    "key": "ctrl+alt+h",
     "command": "workbench.action.previousEditor"
   },
   {
@@ -34,7 +34,7 @@
     "command": "-workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+alt+l",
     "command": "workbench.action.nextEditor"
   },
   {

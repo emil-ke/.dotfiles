@@ -162,3 +162,5 @@ alias vim='nvim'
 
 # zoxide
 eval "$(zoxide init bash)"
+
+[ -f "/home/emil/.ghcup/env" ] && source "/home/emil/.ghcup/env" # ghcup-env

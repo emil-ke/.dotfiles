@@ -106,8 +106,8 @@ keymap("n", ">", ">gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Formating
-keymap("n", "fo", ":Format<CR>", opts)
-keymap("v", "fo", ":Format<CR>", opts)
+keymap("n", "fo", ":lua vim.lsp.buf.format()<CR>", opts)
+keymap("v", "fo", ":lua vim.lsp.buf.format()<CR>", opts)
 
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 -- stop highlighting search thingy
