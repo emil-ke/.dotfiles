@@ -2,6 +2,7 @@
 # See man `man zathurarc'
 map r reload
 map p print
+unmap i
 map i recolor
 map J zoom out
 map K zoom in
