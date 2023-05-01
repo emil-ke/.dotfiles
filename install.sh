@@ -2,7 +2,8 @@
 
 ./install_packages.sh
 
-# nvm.fish has an error when you have no folder in ~/.local/share/nvm. But this seems to fix it. (TODO: see if this is up to date and if it's needed or not)
+# nvm.fish has an error when you have no folder at ~/.local/share/nvm. 
+# But this seems to fix it. (TODO: see if this is up to date and if it's needed or not)
 if [ -d "~/.local/share/nvm"]
 then
     :
@@ -14,5 +15,3 @@ fi
 
 # initialize zoxide
 zoxide init fish
-
-# TODO: update install script to autoinstall everything for neovim
