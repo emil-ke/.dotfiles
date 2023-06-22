@@ -9,7 +9,7 @@
       "comments": "on",
       "strings": "on",
       "other": "on"
-    },
+    }
   },
   "[python]": {
     "editor.tabSize": 4
