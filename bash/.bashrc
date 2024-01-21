@@ -1,4 +1,3 @@
-#
 # ~/.bashrc
 #
 
@@ -33,13 +32,6 @@ colors() {
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
-
-# PATH
-
-export GOROOT=/usr/lib/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH="$HOME/bin:$PATH"
 
 # Change the window title of X terminals
 # case ${TERM} in
@@ -157,10 +149,5 @@ eval "$(starship init bash)"
 eval "$(pyenv init -)"
 alias vim='nvim'
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
 # zoxide
 eval "$(zoxide init bash)"
-
-[ -f "/home/emil/.ghcup/env" ] && source "/home/emil/.ghcup/env" # ghcup-env

@@ -1,63 +1,9 @@
 [user]
+	email = emilbertlin0@gmail.com
 	name = Emil Bertlin
-	email = 75381427+emil-ke@users.noreply.github.com
-	username = emil-ke
-[core]
-	editor = nvim
-[web]
-	browser = brave
-[instaweb]
-	httpd = apache2 -f
-[rerere]
-	enabled = 1
-	autoupdate = 1
-[push]
-	default = matching
-[color]
-	ui = auto
-[color "branch"]
-	current = yellow bold
-	local = green bold
-	remote = cyan bold
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[color "status"]
-	added = green bold
-	changed = yellow bold
-	untracked = red bold
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
-[delta]
-	features = line-numbers decorations
-	line-numbers = true
-[delta "decorations"]
-	minus-style = red bold normal
-	plus-style = green bold normal
-	minus-emph-style = white bold red
-	minus-non-emph-style = red bold normal
-	plus-emph-style = white bold green
-	plus-non-emph-style = green bold normal
-	file-style = yellow bold none
-	file-decoration-style = yellow box
-	hunk-header-style = magenta bold
-	hunk-header-decoration-style = magenta box
-	minus-empty-line-marker-style = normal normal
-	plus-empty-line-marker-style = normal normal
-	line-numbers-right-format = "{np:^4}│ "
-[gitflow "prefix"]
-	versiontag = v
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[init]
-	defaultBranch = main
-[credential]
-	helper = store --file ~/.my-credentials
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

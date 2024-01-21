@@ -99,13 +99,13 @@ schemes:
 colors: *tokyo-night
 font:
   normal:
-    family: Hack Nerd Font
+    family: Hack
     style: normal
   Bold:
-    family: Hack Nerd Font
+    family: Hack
     style: Bold
   italic:
-    family: Hack Nerd Font
+    family: Hack
     style: Italic
   size: 11
   offset:

@@ -9,10 +9,6 @@ status is-interactive; and pyenv init - | source
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
-# Go path
-set -x GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
-
 # Cargo path
 set -x PATH $PATH $HOME/.cargo/bin
 
@@ -36,8 +32,6 @@ abbr -a gitl "git log --color=always -n 10 --format='%C(cyan)%h %C(blue)%ar%C(au
 # Other abbreviations
 abbr -a files nautilus
 abbr -a cat bat
-abbr -a vim lvim
-abbr -a vi lvim
 abbr -a cd z
 
 # starship init
