@@ -42,8 +42,8 @@ white = "0xc0caf5"
 yellow = "0xe0af68"
 
 [colors.primary]
-background = "0x1a1b26"
-foreground = "0xa9b1d6"
+background = "0x071013"
+foreground = "0xc9c4b5"
 
 [cursor]
 style = "Block"
@@ -65,7 +65,7 @@ style = "normal"
 
 [font.offset]
 x = 0
-y = 5
+y = 7
 
 [shell]
 program = "/usr/bin/fish"

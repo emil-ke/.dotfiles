@@ -46,7 +46,6 @@
   "terminal.integrated.tabs.enabled": true,
   "workbench.startupEditor": "none",
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
@@ -121,4 +120,5 @@
     "winterscape",
     "woodsmoke"
   ],
+  "workbench.colorTheme": "Houston",
 }
