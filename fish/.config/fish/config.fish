@@ -33,6 +33,7 @@ abbr -a gitl "git log --color=always -n 10 --format='%C(cyan)%h %C(blue)%ar%C(au
 abbr -a files nautilus
 abbr -a cat bat
 abbr -a cd z
+abbr -a epy epy_font
 
 # starship init
 starship init fish | source
