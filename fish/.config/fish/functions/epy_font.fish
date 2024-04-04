@@ -1,19 +1,19 @@
 function epy_font
-   # Ensure Alacritty config directory exists
-   if not test -d ~/.config/alacritty 
-      mkdir -p  ~/.config/alacritty
-   end
+    # Ensure Alacritty config directory exists
+    if not test -d ~/.config/alacritty
+        mkdir -p ~/.config/alacritty
+    end
 
-   # Backup and restore logic for main config file
-   if test -f ~/.config/alacritty/alacritty.toml
-       mv ~/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty_main.toml
-   end
+    # Backup and restore logic for main config file
+    if test -f ~/.config/alacritty/alacritty.toml
+        mv ~/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty_main.toml
+    end
 
-   # Create temporary, empty config file
-   touch ~/.config/alacritty/alacritty.toml
+    # Create temporary, empty config file
+    touch ~/.config/alacritty/alacritty.toml
 
-   # Noob warning 
-   echo '
+    # Noob warning 
+    echo '
 [bell]
 animation = "EaseOutExpo"
 duration = 0
@@ -73,15 +73,14 @@ program = "/usr/bin/fish"
 [window]
 decorations = "None"
 dynamic_padding = true
-'>> ~/.config/alacritty/alacritty.toml
+' >>~/.config/alacritty/alacritty.toml
 
-   # Launch epy with optional command line arguments
-   epy $argv
+    # Launch epy with optional command line arguments
+    epy $argv
 
-   # Restore default Alacritty configuration
-   rm ~/.config/alacritty/alacritty.toml
-   if test -f ~/.config/alacritty/alacritty_main.toml
-       mv ~/.config/alacritty/alacritty_main.toml ~/.config/alacritty/alacritty.toml
-   end
+    # Restore default Alacritty configuration
+    rm ~/.config/alacritty/alacritty.toml
+    if test -f ~/.config/alacritty/alacritty_main.toml
+        mv ~/.config/alacritty/alacritty_main.toml ~/.config/alacritty/alacritty.toml
+    end
 end
-
