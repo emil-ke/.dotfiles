@@ -16,17 +16,17 @@ white = "0xebf4ff"
 yellow = "0xff9e64"
 
 [colors.normal]
-black = "0x32344a"
-blue = "0x7aa2f7"
-cyan = "0x40a2e3"
-green = "0x9ece6a"
+black = "0x0A0908"
+blue = "0x429eff"
+cyan = "0x69e1ff"
+green = "0x94e06e"
 magenta = "0xad8ee6"
 red = "0xf7768e"
-white = "0xc0caf5"
+white = "0xEAE0D5"
 yellow = "0xe0af68"
 
 [colors.primary]
-background = "0x1a1b26"
+background = "0x000000"
 foreground = "0xa9b1d6"
 
 [cursor]

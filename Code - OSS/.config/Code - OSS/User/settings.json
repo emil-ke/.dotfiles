@@ -72,7 +72,6 @@
   "editor.overviewRulerBorder": true,
   "editor.scrollbar.horizontal": "auto",
   "editor.scrollbar.vertical": "auto",
-  "breadcrumbs.enabled": false,
   "workbench.tree.renderIndentGuides": "none",
   "explorer.openEditors.visible": 0,
   "search.decorations.colors": false,
@@ -121,4 +120,5 @@
     "woodsmoke"
   ],
   "workbench.colorTheme": "Houston",
+  "C_Cpp.intelliSenseEngine": "disabled",
 }
