@@ -118,13 +118,6 @@ vnoremap y "+y
 nnoremap p "+p
 vnoremap p "+p
 
-nnoremap x "+x
-vnoremap x "+x
-
-nnoremap d "+d
-vnoremap d "+d
-
-
 " fzf stuff
 let g:fzf_layout = { 'down': '~35%' }
 
