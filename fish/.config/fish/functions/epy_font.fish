@@ -67,12 +67,15 @@ style = "normal"
 x = 0
 y = 7
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/fish"
 
 [window]
 decorations = "None"
 dynamic_padding = true
+
+[terminal]
+
 ' >>~/.config/alacritty/alacritty.toml
 
     # Launch epy with optional command line arguments

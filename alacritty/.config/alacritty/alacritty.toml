@@ -60,7 +60,7 @@ mouse = "Middle"
 history = 5000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/fish"
 
 [window]
@@ -70,3 +70,5 @@ dynamic_padding = false
 [window.padding]
 x = 16
 y = 8
+
+[terminal]
