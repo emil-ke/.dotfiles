@@ -35,7 +35,7 @@ set foldmethod=indent
 set foldnestmax=3
 set nofoldenable
 
-set spell
+" set spell
 
 set laststatus=0
 
