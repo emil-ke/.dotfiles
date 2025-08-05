@@ -23,7 +23,7 @@ abbr -a .5 cd ../../../../..
 abbr -a lt exa -aT --color=always --group-directories-first
 
 # Git commands
-abbr -a gs git status
+abbr -a gs git status -s
 abbr -a gc git clone
 abbr -a gco git checkout
 abbr -a gitc git commit -m
