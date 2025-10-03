@@ -10,7 +10,10 @@ set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
 # Cargo path
-set -x PATH $PATH $HOME/.cargo/bin
+if status is-login
+    contains ~/.cargo/bin $PATH
+    or set -x PATH $PATH $HOME/.cargo/bin
+end
 
 # navigation
 abbr -a .. cd ..
@@ -18,6 +21,10 @@ abbr -a .2 cd ../..
 abbr -a .3 cd ../../..
 abbr -a .4 cd ../../../..
 abbr -a .5 cd ../../../../..
+
+# launch Unreal5
+abbr -a unreal exec ~/Unreal5/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor
+
 
 # ls / exa
 abbr -a lt exa -aT --color=always --group-directories-first
@@ -35,6 +42,7 @@ abbr -a cat bat
 abbr -a cd z
 abbr -a epy epy_font
 
+
 # starship init
 starship init fish | source
 
@@ -50,3 +58,7 @@ set -x _ZO_FZF_OPTS "-e"
 set -x _ZO_MAXAGE "8000"
 set -x _ZO_RESOLVE_SYMLINKS "1"
 
+
+if not contains "/home/emil/.local/share/bob/nvim-bin" $PATH
+    set -x PATH "/home/emil/.local/share/bob/nvim-bin" $PATH
+end
