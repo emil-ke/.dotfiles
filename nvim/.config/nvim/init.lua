@@ -1,23 +1,23 @@
-vim.o.number = true
-vim.o.tabstop = 2
-vim.o.signcolumn = "yes"
-vim.o.swapfile = false
-vim.o.winborder = "rounded"
-vim.g.mapleader = " "
+local options = {
+	number = true,
+	tabstop = 2,
+	signcolumn = "yes",
+	swapfile = false,
+	winborder = "rounded",
+	termguicolors = true,
+	ignorecase = true,
+}
 
-vim.keymap.set('n', '<leader>so', ':update<CR> :source<CR>')
-vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<leader>q', ':quit<CR>')
-
-
-vim.keymap.set({ 'v', 'x', 'n' }, '<leader>y', '"+y<CR>')
-vim.keymap.set({ 'v', 'x', 'n' }, '<leader>d', '"+d<CR>')
+for opt, val in pairs(options) do
+	vim.o[opt] = val
+end
 
 vim.pack.add({
 	"https://github.com/vague2k/vague.nvim",
 	"https://github.com/stevearc/oil.nvim",
 	"https://github.com/echasnovski/mini.pick",
 	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/emil-ke/true-zen.nvim", -- my fork (fixed)
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -36,15 +36,39 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.cmd("set completeopt+=noselect")
 
 
-require "mini.pick".setup()
-require "oil".setup()
-
-vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
-vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
-vim.keymap.set('n', '<leader>e', ":Oil<CR>")
-
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.lsp.enable({ "lua_ls", "gopls" })
+
 
 vim.cmd("colorscheme vague")
 vim.cmd(":hi statusline guibg=NONE")
+
+require "mini.pick".setup()
+require "oil".setup()
+
+
+-- mappings
+vim.g.mapleader = " "
+local map = vim.keymap.set
+
+map('n', '<leader>so', ':update<CR> :source<CR>')
+map('n', '<leader>w', ':write<CR>')
+map('n', '<leader>q', ':quit<CR>')
+map('n', '<C-ö>', '<Cmd>Open .<CR>')
+map('n', '<leader>s', '<Cmd>e #<CR>')
+map('n', '<leader>S', '<Cmd>bot sf #<CR>')
+map('n', 'qq', ":noh<CR>")
+
+map('n', 'gm', ":call cursor(0, len(getline('.'))/2)<CR>")
+map('n', 'ge', ":call cursor(0, len(getline('.')))<CR>")
+map('n', 'gs', ":call cursor(0, 0)<CR>") -- or use 0, maybe easier
+
+map({ 'v', 'x', 'n' }, '<leader>y', '"+y<CR>')
+map({ 'v', 'x', 'n' }, '<leader>d', '"+d<CR>')
+
+map('n', '<leader>g', ":Pick grep_live<CR>")
+map('n', '<leader>f', ":Pick files<CR>")
+map('n', '<leader>h', ":Pick help<CR>")
+map('n', '<leader>e', ":Oil<CR>")
+map('n', '<leader>za', ':TZAtaraxis<CR>')
+
+map('n', '<leader>lf', vim.lsp.buf.format)
