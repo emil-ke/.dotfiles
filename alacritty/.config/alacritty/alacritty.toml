@@ -1,3 +1,4 @@
+
 [bell]
 animation = "EaseOutExpo"
 duration = 0
@@ -16,18 +17,18 @@ white = "0xebf4ff"
 yellow = "0xff9e64"
 
 [colors.normal]
-black = "0x0A0908"
-blue = "0x429eff"
-cyan = "0x69e1ff"
-green = "0x94e06e"
+black = "0x32344a"
+blue = "0x7aa2f7"
+cyan = "0x40a2e3"
+green = "0x9ece6a"
 magenta = "0xad8ee6"
 red = "0xf7768e"
-white = "0xEAE0D5"
+white = "0xc0caf5"
 yellow = "0xe0af68"
 
 [colors.primary]
-background = "0x000000"
-foreground = "0xa9b1d6"
+background = "0x071013"
+foreground = "0xc9c4b5"
 
 [cursor]
 style = "Block"
@@ -37,7 +38,7 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 12
+size = 14
 
 [font.italic]
 family = "iA Writer Mono S"
@@ -49,26 +50,15 @@ style = "normal"
 
 [font.offset]
 x = 0
-y = 3
-
-[[mouse.bindings]]
-action = "PasteSelection"
-mouse = "Middle"
-
-
-[scrolling]
-history = 5000
-multiplier = 3
+y = 7
 
 [terminal.shell]
 program = "/usr/bin/fish"
 
 [window]
 decorations = "None"
-dynamic_padding = false
-
-[window.padding]
-x = 16
-y = 8
+dynamic_padding = true
 
 [terminal]
+
+
