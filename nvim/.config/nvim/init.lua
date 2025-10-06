@@ -51,7 +51,7 @@ vim.g.mapleader = " "
 local map = vim.keymap.set
 
 map('n', '<leader>so', ':update<CR> :source<CR>')
-map('n', '<leader>w', ':write<CR>')
+map('n', '<leader>w', ':update<CR>')
 map('n', '<leader>q', ':quit<CR>')
 map('n', '<C-ö>', '<Cmd>Open .<CR>')
 map('n', '<leader>s', '<Cmd>e #<CR>')
