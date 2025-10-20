@@ -1,11 +1,18 @@
 local options = {
 	number = true,
+	shiftwidth = 2,
 	tabstop = 2,
 	signcolumn = "yes",
 	swapfile = false,
 	winborder = "rounded",
 	termguicolors = true,
 	ignorecase = true,
+	smartcase = true,
+	smarttab = true,
+	updatetime = 250,
+	linebreak = true,
+	breakindent = true,
+	wrap = true,
 }
 
 for opt, val in pairs(options) do
@@ -18,6 +25,7 @@ vim.pack.add({
 	"https://github.com/echasnovski/mini.pick",
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/emil-ke/true-zen.nvim", -- my fork (fixed)
+	"https://github.com/chomosuke/typst-preview.nvim",
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -36,12 +44,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.cmd("set completeopt+=noselect")
 
 
-vim.lsp.enable({ "lua_ls", "gopls", "ruff"  })
+vim.lsp.enable({ "lua_ls", "gopls", "ruff", "clangd", "tinymist", })
 
 
 vim.cmd("colorscheme vague")
 vim.cmd(":hi statusline guibg=NONE")
-
 require "mini.pick".setup()
 require "oil".setup()
 
@@ -56,7 +63,7 @@ map('n', '<leader>q', ':quit<CR>')
 map('n', '<C-ö>', '<Cmd>Open .<CR>')
 map('n', '<leader>s', '<Cmd>e #<CR>')
 map('n', '<leader>S', '<Cmd>bot sf #<CR>')
-map('n', 'qq', ":noh<CR>")
+map('n', 'qq', ":nohlsearch<CR>")
 
 map('n', 'gm', ":call cursor(0, len(getline('.'))/2)<CR>")
 map('n', 'ge', ":call cursor(0, len(getline('.')))<CR>")
@@ -69,6 +76,32 @@ map('n', '<leader>g', ":Pick grep_live<CR>")
 map('n', '<leader>f', ":Pick files<CR>")
 map('n', '<leader>h', ":Pick help<CR>")
 map('n', '<leader>e', ":Oil<CR>")
-map('n', '<leader>za', ':TZAtaraxis<CR>')
+
+map('n', '<leader>za', ":TZAtaraxis <CR>")
 
 map('n', '<leader>lf', vim.lsp.buf.format)
+
+map('n', '<C-p>', ":TypstPreviewToggle <CR>")
+
+-- better indenting
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+
+
+-- if editing a single file in ataraxis mode and run :quit, this makes it so that nvim just closes.
+-- if multiple buffers are open, it behaves normally.
+vim.api.nvim_create_autocmd("QuitPre", {
+	callback = function()
+		local ok, ataraxis = pcall(require, "true-zen.ataraxis")
+		if not ok then return end
+		if ataraxis.running then
+			local listed_bufs = vim.fn.getbufinfo({ buflisted = 1 })
+			if #listed_bufs == 1 then
+				vim.schedule(function()
+					vim.cmd("qa")
+				end)
+			end
+		end
+	end,
+})

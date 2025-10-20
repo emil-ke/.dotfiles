@@ -38,19 +38,19 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 13
+size = 14
 
 [font.italic]
-family = "JetBrains Mono"
+family = "iA Writer Mono S"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono"
+family = "iA Writer Mono S"
 style = "normal"
 
 [font.offset]
 x = 0
-y = 4
+y = 7
 
 [terminal.shell]
 program = "/usr/bin/fish"
