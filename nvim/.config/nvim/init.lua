@@ -105,6 +105,12 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	command = "silent !gdformat %",
 })
 
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "*.gdshader",
+	command = "silent !clang-format -i %", -- clang-format seems to work well for this
+})
+
 -- if editing a single file in ataraxis mode and run :quit, this makes it so that nvim just closes.
 -- if multiple buffers are open, it behaves normally.
 vim.api.nvim_create_autocmd("QuitPre", {
