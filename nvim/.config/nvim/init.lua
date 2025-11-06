@@ -44,7 +44,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.cmd("set completeopt+=noselect")
 
 
-vim.lsp.enable({ "lua_ls", "gopls", "ruff", "clangd", "tinymist", })
+vim.lsp.enable({
+	"lua_ls",
+	"gopls",
+	"ruff",
+	"clangd",
+	"tinymist",
+	"eslint",
+	"ts_ls",
+	"jsonls",
+	"cssls",
+	"gdscript",
+})
 
 
 vim.cmd("colorscheme vague")
@@ -64,6 +75,7 @@ map('n', '<C-ö>', '<Cmd>Open .<CR>')
 map('n', '<leader>s', '<Cmd>e #<CR>')
 map('n', '<leader>S', '<Cmd>bot sf #<CR>')
 map('n', 'qq', ":nohlsearch<CR>")
+map('n', 'lb', ":b#<CR>")
 
 map('n', 'gm', ":call cursor(0, len(getline('.'))/2)<CR>")
 map('n', 'ge', ":call cursor(0, len(getline('.')))<CR>")
@@ -81,13 +93,17 @@ map('n', '<leader>za', ":TZAtaraxis <CR>")
 
 map('n', '<leader>lf', vim.lsp.buf.format)
 
-map('n', '<C-p>', ":TypstPreviewToggle <CR>")
+map('n', '<leader><C-p>', ":TypstPreviewToggle <CR>")
 
 -- better indenting
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "*.gd",
+	command = "silent !gdformat %",
+})
 
 -- if editing a single file in ataraxis mode and run :quit, this makes it so that nvim just closes.
 -- if multiple buffers are open, it behaves normally.
