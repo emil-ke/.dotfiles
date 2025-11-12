@@ -26,6 +26,7 @@ vim.pack.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/emil-ke/true-zen.nvim", -- my fork (fixed)
 	"https://github.com/chomosuke/typst-preview.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -55,7 +56,16 @@ vim.lsp.enable({
 	"jsonls",
 	"cssls",
 	"gdscript",
+	"svelte",
 })
+
+require 'nvim-treesitter.configs'.setup {
+	ensure_installed = { "lua", "typescript", "svelte", "html", "css", "javascript", "gdscript", },
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = false,
+	},
+}
 
 
 vim.cmd("colorscheme vague")
@@ -76,6 +86,9 @@ map('n', '<leader>s', '<Cmd>e #<CR>')
 map('n', '<leader>S', '<Cmd>bot sf #<CR>')
 map('n', 'qq', ":nohlsearch<CR>")
 map('n', 'lb', ":b#<CR>")
+
+map('n', "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+map('n', "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 
 map('n', 'gm', ":call cursor(0, len(getline('.'))/2)<CR>")
 map('n', 'ge', ":call cursor(0, len(getline('.')))<CR>")
