@@ -111,7 +111,7 @@ map({ 'v', 'x', 'n' }, '<leader>d', '"+d<CR>')
 map('n', '<leader>f', ":Telescope find_files<CR>")
 map('n', '<leader>g', ":Telescope live_grep<CR>")
 map('n', '<leader>h', ":Telescope help_tags<CR>")
-map('n', '<leader>fb', ":Telescope buffers<CR>")
+map('n', '<leader>b', ":Telescope buffers<CR>")
 
 map('n', '<leader>e', ":Oil<CR>")
 
