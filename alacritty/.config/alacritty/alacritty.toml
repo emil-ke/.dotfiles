@@ -1,6 +1,5 @@
 
 [bell]
-animation = "EaseOutExpo"
 duration = 0
 
 [colors]
@@ -59,6 +58,5 @@ program = "/usr/bin/fish"
 decorations = "None"
 dynamic_padding = true
 
-[terminal]
 
 
