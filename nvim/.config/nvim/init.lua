@@ -22,12 +22,16 @@ end
 vim.pack.add({
 	"https://github.com/vague2k/vague.nvim",
 	"https://github.com/stevearc/oil.nvim",
-	"https://github.com/echasnovski/mini.pick",
+	"https://github.com/nvim-lua/plenary.nvim",
+	"https://github.com/BurntSushi/ripgrep",
+	"https://github.com/nvim-telescope/telescope-fzf-native.nvim",
+	"https://github.com/nvim-telescope/telescope.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/emil-ke/true-zen.nvim", -- my fork (fixed)
 	"https://github.com/chomosuke/typst-preview.nvim",
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 })
+
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('my.lsp', {}),
@@ -59,7 +63,7 @@ vim.lsp.enable({
 	"svelte",
 })
 
-require 'nvim-treesitter.configs'.setup {
+require "nvim-treesitter.configs".setup {
 	ensure_installed = { "lua", "typescript", "svelte", "html", "css", "javascript", "gdscript", },
 	highlight = {
 		enable = true,
@@ -70,8 +74,15 @@ require 'nvim-treesitter.configs'.setup {
 
 vim.cmd("colorscheme vague")
 vim.cmd(":hi statusline guibg=NONE")
-require "mini.pick".setup()
 require "oil".setup()
+require "telescope".setup {
+	pickers = {
+		find_files = {
+			theme = "ivy"
+		},
+
+	}
+}
 
 
 -- mappings
@@ -85,7 +96,7 @@ map('n', '<C-ö>', '<Cmd>Open .<CR>')
 map('n', '<leader>s', '<Cmd>e #<CR>')
 map('n', '<leader>S', '<Cmd>bot sf #<CR>')
 map('n', 'qq', ":nohlsearch<CR>")
-map('n', 'lb', ":b#<CR>")
+map('n', '<leader>lb', ":b#<CR>")
 
 map('n', "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 map('n', "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
@@ -97,9 +108,11 @@ map('n', 'gs', ":call cursor(0, 0)<CR>") -- or use 0, maybe easier
 map({ 'v', 'x', 'n' }, '<leader>y', '"+y<CR>')
 map({ 'v', 'x', 'n' }, '<leader>d', '"+d<CR>')
 
-map('n', '<leader>g', ":Pick grep_live<CR>")
-map('n', '<leader>f', ":Pick files<CR>")
-map('n', '<leader>h', ":Pick help<CR>")
+map('n', '<leader>f', ":Telescope find_files<CR>")
+map('n', '<leader>g', ":Telescope live_grep<CR>")
+map('n', '<leader>h', ":Telescope help_tags<CR>")
+map('n', '<leader>fb', "Telescope buffers<CR>")
+
 map('n', '<leader>e', ":Oil<CR>")
 
 map('n', '<leader>za', ":TZAtaraxis <CR>")
