@@ -61,6 +61,7 @@ vim.lsp.enable({
 	"cssls",
 	"gdscript",
 	"svelte",
+	"astro",
 })
 
 require "nvim-treesitter.configs".setup {
@@ -92,6 +93,7 @@ local map = vim.keymap.set
 map('n', '<leader>so', ':update<CR> :source<CR>')
 map('n', '<leader>w', ':update<CR>')
 map('n', '<leader>q', ':quit<CR>')
+map('n', '<leader>c', ':bp | bd #<CR>')
 map('n', '<C-ö>', '<Cmd>Open .<CR>')
 map('n', '<leader>s', '<Cmd>e #<CR>')
 map('n', '<leader>S', '<Cmd>bot sf #<CR>')
@@ -102,8 +104,6 @@ map('n', "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 map('n', "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 
 map('n', 'gm', ":call cursor(0, len(getline('.'))/2)<CR>")
-map('n', 'ge', ":call cursor(0, len(getline('.')))<CR>")
-map('n', 'gs', ":call cursor(0, 0)<CR>") -- or use 0, maybe easier
 
 map({ 'v', 'x', 'n' }, '<leader>y', '"+y<CR>')
 map({ 'v', 'x', 'n' }, '<leader>d', '"+d<CR>')
