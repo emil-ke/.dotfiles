@@ -125,6 +125,9 @@ map('n', '<leader><C-p>', ":TypstPreviewToggle <CR>")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
+map('n', '<leader>ä', vim.diagnostic.open_float)
+map('n', '<leader>ö', vim.diagnostic.setloclist)
+
 
 vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = "*.gd",
