@@ -65,7 +65,7 @@ vim.lsp.enable({
 })
 
 require "nvim-treesitter.configs".setup {
-	ensure_installed = { "lua", "typescript", "svelte", "html", "css", "javascript", "gdscript", },
+	ensure_installed = { "lua", "typescript", "svelte", "html", "css", "javascript", "gdscript", "sql"},
 	highlight = {
 		enable = true,
 		additional_vim_regex_highlighting = false,
